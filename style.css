@@ -1,0 +1,359 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding-bottom: 100px; /* Espaço para o rodapé fixo */
+    background-color: #fdf6ff; /* Tom de lilás bem claro */
+    color: #444;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(to bottom, #e1b2e1, #f1d9f1);
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #d8a8d8;
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5em;
+    margin: 0;
+    color: #583758;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    color: #6a4f6a;
+}
+
+/* Seções de Marcas */
+.secao-marca {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+}
+
+.secao-marca h2 {
+    font-family: 'Lora', serif;
+    font-size: 2.2em;
+    color: #583758;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e1b2e1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.secao-marca h2 img {
+    height: 40px;
+    width: auto;
+    /* Adicionado para ajudar a visualizar o espaço da imagem caso ela não carregue */
+    background-color: #fdf6ff;
+    border: 1px dashed #d8a8d8;
+}
+
+/* Catálogo de Produtos */
+.catalogo-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produto {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.produto img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: contain; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.produto h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #333;
+}
+.produto .marca {
+    font-size: 0.8em;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.produto .descricao {
+    font-size: 0.9em;
+    color: #666;
+    flex-grow: 1; 
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.produto .preco {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #583758;
+}
+
+.produto button {
+    background-color: #d687d6;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    font-weight: 700;
+}
+
+.produto button:hover {
+    background-color: #bf6fbf;
+}
+
+/* Rodapé com Botão de Finalizar */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(241, 217, 241, 0.95);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #e1b2e1;
+    z-index: 100;
+}
+
+#finalizar-pedido {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+}
+
+#finalizar-pedido:hover {
+    background-color: #128C7E;
+}
+
+#finalizar-pedido .fab {
+    margin-right: 10px;
+}
+
+/* Ícone da Sacola */
+#sacola-icone {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #e1b2e1;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 101;
+}
+
+#contador-sacola {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #c13584;
+    color: white;
+    font-size: 0.7em;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+/* Estilos do Modal da Sacola */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #aaa;
+}
+.modal-fechar:hover {
+    color: #333;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #583758;
+    font-family: 'Lora', serif;
+    border-bottom: 2px solid #f1d9f1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#sacola-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.sacola-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.sacola-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sacola-item-info {
+    flex-grow: 1;
+}
+
+.sacola-item-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+}
+
+.sacola-item-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.sacola-item-controles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sacola-item-controles button {
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sacola-item-controles button:hover {
+    background: #e7e7e7;
+}
+
+.sacola-item-controles .remover-item {
+    background: none;
+    border: none;
+    color: #c0392b;
+    font-size: 1.3em;
+}
+.sacola-item-controles .remover-item:hover {
+    color: #e74c3c;
+}
+
+.sacola-resumo {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #f1d9f1;
+}
+
+.sacola-total {
+    text-align: right;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.btn-finalizar-modal {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn-finalizar-modal:hover {
+    background-color: #128C7E;
+}
+
+.btn-finalizar-modal .fab {
+    margin-right: 10px;
+}
