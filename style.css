@@ -59,14 +59,15 @@ header p {
 /* Catálogo de Produtos */
 .catalogo-produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    /* Ajustado para um grid mais compacto em todas as telas */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
 }
 
 .produto {
     background-color: white;
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 8px; /* Borda mais sutil */
+    padding: 10px; /* Padding reduzido para cards menores */
     text-align: left;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     display: flex;
@@ -81,36 +82,45 @@ header p {
 
 .produto img {
     max-width: 100%;
-    height: 250px;
+    height: 140px; /* Altura da imagem reduzida */
     object-fit: contain; 
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     background-color: #f9f9f9;
 }
 
 .produto h3 {
-    font-size: 1.1em;
-    margin: 10px 0;
+    font-size: 0.9em; /* Fonte do título ajustada */
+    margin: 5px 0;
     color: #333;
+    /* Garante alinhamento mesmo com títulos de 1 ou 2 linhas */
+    line-height: 1.2;
+    min-height: 2.4em; /* 1.2em * 2 linhas */
 }
 .produto .marca {
-    font-size: 0.8em;
+    font-size: 0.7em; /* Fonte da marca ajustada */
     color: #888;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: 700;
 }
 
 .produto .descricao {
-    font-size: 0.9em;
+    font-size: 0.78em; /* Fonte sutilmente ajustada para melhor encaixe */
     color: #666;
     flex-grow: 1; 
-    margin-bottom: 15px;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    /* Aumentado para 4 linhas para exibir mais texto */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .produto .preco {
-    font-size: 1.3em;
+    font-size: 1.1em; /* Fonte do preço ajustada */
     font-weight: bold;
     color: #583758;
 }
@@ -119,12 +129,13 @@ header p {
     background-color: #d687d6;
     color: white;
     border: none;
-    padding: 12px 18px;
-    border-radius: 8px;
+    padding: 8px 12px; /* Botão menor */
+    border-radius: 6px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 10px; /* Margem ajustada */
     transition: background-color 0.3s;
     font-weight: 700;
+    font-size: 0.8em;
 }
 
 .produto button:hover {
@@ -139,10 +150,14 @@ footer {
     width: 100%;
     background-color: rgba(241, 217, 241, 0.95);
     backdrop-filter: blur(5px);
-    padding: 15px;
-    text-align: center;
+    padding: 15px 20px; /* Padding ajustado para melhor espaçamento */
     border-top: 1px solid #e1b2e1;
     z-index: 100;
+    box-sizing: border-box; /* Garante que o padding não cause overflow */
+    /* Centraliza o botão de forma robusta com Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #finalizar-pedido {
@@ -156,6 +171,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
     font-weight: 700;
+    max-width: 100%; /* Garante que o botão não ultrapasse a largura do rodapé */
 }
 
 #finalizar-pedido:hover {
@@ -390,11 +406,6 @@ footer {
     }
     .secao-marca h2 img {
         height: 35px;
-    }
-
-    /* Grid de produtos */
-    .catalogo-produtos {
-        gap: 20px; /* Espaçamento menor entre os cards */
     }
 
     /* Modal */

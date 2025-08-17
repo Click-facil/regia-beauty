@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nome: 'HIDRATANTE DESODORANTE CORPORAL ILUMINADOR ALLUMAGE RACCO 55g',
         descricao: 'Com partículas de brilho para efeito glow, textura leve e toque seco. Hidrata, ilumina e perfuma com a fragrância Allumage.',
         preco: 39.90, // Preço atualizado
-        imagem: 'imagens/racco/img115.png'
+        imagem: 'imagens/racco/img119.png'
     },
     {
         id: 7,
@@ -782,34 +782,10 @@ document.addEventListener('DOMContentLoaded', () => {
         imagem: "https://tfddmr.vtexassets.com/arquivos/ids/159263-300-300"
     },
     {
-        id: 96,
-        marca: "Abelha Rainha",
-        nome: "Amostra Ar Maquiagem Fps 15 Batom Lipchick 3 Em 1 Coral 0,9 G",
-        descricao: "Amostra do batom Lipchick 3 em 1. Ideal para experimentar a cor Coral vibrante, com os benefícios de hidratação e proteção solar.",
-        preco: 0.75,
-        imagem: "https://tfddmr.vtexassets.com/arquivos/ids/159399-300-300"
-    },
-    {
         id: 97,
         marca: "Abelha Rainha",
         nome: "Ar Maquiagem Fps 15 Batom Acido Hialuronico Nude Romantico 3,8 G",
         descricao: "Batom enriquecido com ácido hialurônico e FPS 15 que hidrata intensamente, preenche linhas finas e proporciona cor sofisticada com proteção solar.",
-        preco: 29.99,
-        imagem: "https://tfddmr.vtexassets.com/arquivos/ids/159267-300-300"
-    },
-    {
-        id: 96,
-        marca: "Abelha Rainha",
-        nome: "Amostra Ar Maquiagem Fps 15 Batom Lipchick 3 Em 1 Coral 0,9 G",
-        descricao: "Amostra do batom Lipchick 3 em 1. Ideal para experimentar a cor Coral vibrante com proteção solar.",
-        preco: 0.75,
-        imagem: "https://tfddmr.vtexassets.com/arquivos/ids/159399-300-300"
-    },
-    {
-        id: 97,
-        marca: "Abelha Rainha",
-        nome: "Ar Maquiagem Fps 15 Batom Acido Hialuronico Nude Romantico 3,8 G",
-        descricao: "Batom com ácido hialurônico e FPS 15. Hidrata, preenche linhas finas e protege os lábios.",
         preco: 29.99,
         imagem: "https://tfddmr.vtexassets.com/arquivos/ids/159267-300-300"
     },
