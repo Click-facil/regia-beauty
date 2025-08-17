@@ -1,32 +1,42 @@
+/*
+--- PALETA DE CORES (Régia) ---
+- Fundo (Off-White): #fdfaf9
+- Rosa Quartz/Nude (Claro): #f7e4e4
+- Rosa Quartz/Nude (Médio): #e8d1d1
+- Dourado (Destaques): #c5a47e
+- Vinho (Títulos e Contraste): #6d2e46
+- Texto Principal: #333
+*/
+
 /* Estilos Gerais */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding-bottom: 100px; /* Espaço para o rodapé fixo */
-    background-color: #fdf6ff; /* Tom de lilás bem claro */
-    color: #444;
+    background-color: #fdfaf9; /* Off-White */
+    color: #333;
 }
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(to bottom, #e1b2e1, #f1d9f1);
-    color: #333;
+    background-color: #fdfaf9;
+    color: #e8d1d1; 
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 1px solid #d8a8d8;
+    border-bottom: 1px solid #e8d1d1; /* Rosa Quartz Médio */
 }
 
 header h1 {
     font-family: 'Lora', serif;
     font-size: 2.5em;
     margin: 0;
-    color: #583758;
+    color: #6d2e46; /* Vinho */
 }
 
 header p {
     margin: 5px 0 0;
     font-size: 1.1em;
-    color: #6a4f6a;
+    color: #8c5369; /* Vinho mais claro */
 }
 
 /* Seções de Marcas */
@@ -39,10 +49,10 @@ header p {
 .secao-marca h2 {
     font-family: 'Lora', serif;
     font-size: 2.2em;
-    color: #583758;
+    color: #6d2e46; /* Vinho */
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #e1b2e1;
+    border-bottom: 2px solid #c5a47e; /* Dourado */
     display: flex;
     align-items: center;
     gap: 15px;
@@ -52,15 +62,15 @@ header p {
     height: 40px;
     width: auto;
     /* Adicionado para ajudar a visualizar o espaço da imagem caso ela não carregue */
-    background-color: #fdf6ff;
-    border: 1px dashed #d8a8d8;
+    background-color: #fdfaf9;
+    border: 1px dashed #e8d1d1;
 }
 
 /* Catálogo de Produtos */
 .catalogo-produtos {
     display: grid;
     /* Ajustado para um grid mais compacto em todas as telas */
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
 }
 
@@ -122,11 +132,11 @@ header p {
 .produto .preco {
     font-size: 1.1em; /* Fonte do preço ajustada */
     font-weight: bold;
-    color: #583758;
+    color: #6d2e46;
 }
 
 .produto button {
-    background-color: #d687d6;
+    background-color: #c5a47e;
     color: white;
     border: none;
     padding: 8px 12px; /* Botão menor */
@@ -139,7 +149,7 @@ header p {
 }
 
 .produto button:hover {
-    background-color: #bf6fbf;
+    background-color: #b3916c;
 }
 
 /* Rodapé com Botão de Finalizar */
@@ -148,17 +158,16 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(241, 217, 241, 0.95);
-    backdrop-filter: blur(5px);
-    padding: 15px 20px; /* Padding ajustado para melhor espaçamento */
-    border-top: 1px solid #e1b2e1;
+    background-color: #e8d1d1; 
+    padding: 15px 20px;
+    border-top: 1px solid #d1baba; 
     z-index: 100;
-    box-sizing: border-box; /* Garante que o padding não cause overflow */
-    /* Centraliza o botão de forma robusta com Flexbox */
+    box-sizing: border-box; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 #finalizar-pedido {
     background-color: #25D366;
@@ -187,7 +196,7 @@ footer {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #e1b2e1;
+    background-color: #c5a47e;
     color: white;
     width: 50px;
     height: 50px;
@@ -205,7 +214,7 @@ footer {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: #c13584;
+    background-color: #6D284F;
     color: white;
     font-size: 0.7em;
     padding: 3px 6px;
@@ -265,7 +274,7 @@ footer {
 
 .modal-content h2 {
     margin-top: 0;
-    color: #583758;
+    color: #6d2e46;
     font-family: 'Lora', serif;
     border-bottom: 2px solid #f1d9f1;
     padding-bottom: 10px;

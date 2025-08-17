@@ -20,750 +20,1061 @@ document.addEventListener('DOMContentLoaded', () => {
     const produtos = [
      
   // Array de produtos da Racco com preços atualizados conforme o site oficial.
-
-    {
-        id: 1,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA FEMININA ALLUMAGE RACCO 100ml',
-        descricao: 'Corpo frutal exótico marcado por Groselha Negra e Pera, notas de fundo de Baunilha, Almíscar, Cedro e Sândalo.',
-        preco: 179.90, // Preço atualizado
-        imagem: 'imagens/racco/img115.png'
+ {
+        id: 417,
+        marca: "Racco",
+        nome: "Mousse Spray Depilatório Depeeling Racco, 150ml",
+        descricao: "Depilação prática e sem dor. Remove os pelos em minutos, deixando a pele lisa, macia e hidratada.",
+        preco: 89.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1610_mousse-spray-depilatorio-depeeling-ceef7e1570b98299ee17387541819472-1024-1024.webp"
+    },
+    {
+        id: 418,
+        marca: "Racco",
+        nome: "Desodorante Íntimo Jato Seco, 100ml",
+        descricao: "Fragrância suave e refrescante de longa duração para a região íntima, com jato seco para maior conforto.",
+        preco: 43.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/desodorante-intimo-jato-seco-racco-f98f96964b3678f3d817387543970419-1024-1024.webp"
+    },
+    {
+        id: 419,
+        marca: "Racco",
+        nome: "Sabonete Líquido Íntimo Feminino, 210ml",
+        descricao: "Para a higiene íntima diária, promove uma limpeza delicada e proporciona uma agradável sensação de frescor.",
+        preco: 43.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/intimo-nova-embalagem-racco-995cf88427faf5549717504305750319-1024-1024.webp"
+    },
+    {
+        id: 420,
+        marca: "Racco",
+        nome: "Mousse Spray Depilatório Depeeling Soft Racco, 150ml",
+        descricao: "Fórmula suave para depilação sem dor. Equilibra eficiência e hidratação, com tecnologia antiodor.",
+        preco: 82.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1616_depeeling-soft-f92e78f66be5088cc217465502919485-1024-1024.webp"
+    },
+    {
+        id: 421,
+        marca: "Racco",
+        nome: "Creme Desodorante Antitranspirante Regulateur Racco, 60g",
+        descricao: "Potente ação antitranspirante em bisnaga, reduz o mau odor e evita o ressecamento das axilas.",
+        preco: 23.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1011_creme-desodorante-antitranspirante-regulateur-racco-bisnaga-b0f47ad9718d0f6e5d17387591856778-1024-1024.webp"
+    },
+    {
+        id: 422,
+        marca: "Racco",
+        nome: "Creme Desodorante Antitranspirante Regulateur Racco, 60g",
+        descricao: "Potente ação antitranspirante em pote, reduz o mau odor e evita o ressecamento das axilas.",
+        preco: 27.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/creme-desodorante-antitranspirante-regulateur-racco-60g-36d46eb7508f55390f17387592097485-1024-1024.webp"
+    },
+    {
+        id: 423,
+        marca: "Racco",
+        nome: "Sérum Corporal Anticelulite Com DMAE Ciclos Racco, 190ml",
+        descricao: "Sérum com DMAE e ativos que reduzem a celulite, atenuam a flacidez e hidratam a pele.",
+        preco: 159.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5501_serum-anticelulite-ciclos_valvula-3efe091abb7f7cced217387528762158-1024-1024.webp"
+    },
+    {
+        id: 424,
+        marca: "Racco",
+        nome: "Gel Hidratante de Massagem Intimo Racco, 65ml",
+        descricao: "Gel à base de Glicerina Vegetal que hidrata e amacia a pele, ideal para massagens íntimas.",
+        preco: 38.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1018_gel-hidratante-de-massagem-intimo-racco-0d9c5705cb8ad4e6cc17387542736267-1024-1024.webp"
+    },
+    {
+        id: 425,
+        marca: "Racco",
+        nome: "Desodorante Roll-on Antiperspirante Regulateur Racco, 55ml",
+        descricao: "Potente ação antiperspirante que combate o mau odor, com aplicação prática e sensação refrescante.",
+        preco: 24.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1002_desodorante-roll-on-regulateur-63c473c8e8ee2c036417387591692771-1024-1024.webp"
+    },
+    {
+        id: 426,
+        marca: "Racco",
+        nome: "Deo Colônia Leandro Racco, 100ml",
+        descricao: "Fragrância herbal sensual com notas de Absinto, Artemísia, Flor de Laranjeira, Lavanda e Baunilha.",
+        preco: 149.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/deo-colonia-leandro-racco-3914f225a5ca8aeb9817387570392670-1024-1024.webp"
+    },
+    {
+        id: 427,
+        marca: "Racco",
+        nome: "Sabonete Líquido Íntimo For Men Racco, 180ml",
+        descricao: "Proporciona frescor duradouro, equilibra o pH e tem ação calmante com Provitamina B5 e Óleo de Menta.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/ce79509f-35bc-46a1-9ac4-0d1b7f2bf553-16204f1df4879ca74317506857583761-1024-1024.webp"
+    },
+    {
+        id: 428,
+        marca: "Racco",
+        nome: "Spray Perfumado Desodorante Intimo Morango Feminino Racco, 120ml",
+        descricao: "Desodorização eficaz da área íntima com uma deliciosa e suave fragrância de Morango.",
+        preco: 39.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1036_spray-perfumado-desodorante-intimo-morango-f6fd81394ef00fa5be17387543142824-1024-1024.webp"
+    },
+    {
+        id: 429,
+        marca: "Racco",
+        nome: "Sabonete Líquido Intimo Feminino Morango Racco, 210ml",
+        descricao: "Com Óleo Essencial de Menta para uma agradável sensação de refrescância e limpeza delicada.",
+        preco: 43.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1026_intimo-morango-8f455eceab1ac964b717387542935185-1024-1024.webp"
     },
-    {
-        id: 2,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA FEMININA LILAC RACCO 100ml',
-        descricao: 'Combinação intensa e vibrante de Cassis, Grapefruit e Mandarina, com fundo de Sândalo, Vanilla e Musk.',
-        preco: 179.90, // Preço correto
-        imagem: 'imagens/racco/img86.png'
+    {
+        id: 430,
+        marca: "Racco",
+        nome: "Sabonete Líquido para Cuidado da Região Anal Procto Íntimo, 120ml",
+        descricao: "Com Camomila e Arruda, proporciona limpeza segura, conforto, bem-estar e efeito calmante.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/3bad6eaa-15f0-4aa3-9199-1e83de2a65db-dfd2802a9e36bd37f517501652712626-1024-1024.webp"
+    },
+    {
+        id: 431,
+        marca: "Racco",
+        nome: "Creme Desodorante para os Pés Principles Racco, 50g",
+        descricao: "Com cânfora e mentol, combate odores dos pés, previne frieiras e mantém a pele hidratada.",
+        preco: 29.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/creme-desodorante-para-os-pes-principles-racco-50g-6c585438a0eb070b9117387575253741-1024-1024.webp"
+    },
+    {
+        id: 432,
+        marca: "Racco",
+        nome: "Creme Dental com Flúor Multi Aloe Racco, 90g",
+        descricao: "Com sabor de menta, previne cáries e gengivite, deixando os dentes mais brancos e o hálito agradável.",
+        preco: 29.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1194_creme-dental-multi-aloe-ad3465be7c304acf9717387560562689-1024-1024.webp"
+    },
+    {
+        id: 433,
+        marca: "Racco",
+        nome: "Desodorante Íntimo Jato Seco For Men Racco, 100ml",
+        descricao: "Ação refrescante e perfume suave que prolongam a sensação de limpeza, com toque seco.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1153_formen_desodorante-intimo-8fd2fa6ff883bc84e517387542270554-1024-1024.webp"
+    },
+    {
+        id: 434,
+        marca: "Racco",
+        nome: "Sabonete Líquido Intimo 50+ Feminino Racco, 180ml",
+        descricao: "Com Ácido Hialurônico e prebióticos, limpa, hidrata e protege a região íntima da mulher madura.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1045_sabonete-intimo-50-5e6cabd4bacc62ebc317387543525924-1024-1024.webp"
+    },
+    {
+        id: 435,
+        marca: "Racco",
+        nome: "Gel de Aloe Vera Fortifier Multi Aloe, 100ml",
+        descricao: "Gel concentrado de Aloe Vera que hidrata e refresca. Perfeito para aplicar sobre a pele irritada.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1189_gel-de-aloe-vera-fortifier-multi-aloe-55911da7a36518605017387560272519-1024-1024.webp"
+    },
+    {
+        id: 436,
+        marca: "Racco",
+        nome: "IOS Coffee - Suplemento Alimentar em Pó com Ácido Clorogênico Sabor Chocovanilla, 200g",
+        descricao: "Bebida cremosa sabor Café com Chocovanilla que auxilia na perda de peso e tem ação antioxidante.",
+        preco: 99.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/ios-coffee-suplemento-alimentar-em-po-com-acido-clorogenico-sabor-chocovanilla-b4ec6f669ca37cf1b217387547965180-1024-1024.webp"
+    },
+    {
+        id: 437,
+        marca: "Racco",
+        nome: "Deo Colônia Nu Racco, 100ml",
+        descricao: "Fragrância masculina moderna e marcante, com notas refrescantes de Limão Siciliano, Lavanda e Gerânio.",
+        preco: 99.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/deo-colonia-nu-racco-135b9a6e94491d15cd17387571629471-1024-1024.webp"
+    },
+    {
+        id: 438,
+        marca: "Racco",
+        nome: "IOS Aloe Life - Suplemento Pronto para Beber com Vitamina C - Sabor Aloe Vera Racco, 1l",
+        descricao: "Suplemento de Vitamina C pronto para beber com sabor de Aloe Vera, que protege e fortalece o organismo.",
+        preco: 129.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/949_ios-aloe-life-suplemento-pronto-para-beber-com-vitamina-c-sabor-aloe-vera-456763d7e83e742f8f17387546505217-1024-1024.webp"
+    },
+    {
+        id: 439,
+        marca: "Racco",
+        nome: "Desodorante Intimo Tec Racco, 50ml",
+        descricao: "Renova a aparência, hidrata e perfuma a região íntima com exclusiva tecnologia de controle de odor.",
+        preco: 65.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/desodorante-intimo-tec-racco-1032-403829e632da2ab01817387544276150-1024-1024.webp"
+    },
+    {
+        id: 440,
+        marca: "Racco",
+        nome: "S.O.S Aloe Spray Multifuncional Multi Aloe Racco, 200ml",
+        descricao: "Spray com alto teor de Aloe Vera que hidrata, acalma e refresca a pele. Indicado como pós-sol e para cabelos.",
+        preco: 69.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/s-o-s-aloe-spray-multifuncional-multi-aloe-racco-f291268be577022d4d17387561306538-1024-1024.webp"
+    },
+    {
+        id: 441,
+        marca: "Racco",
+        nome: "Kit Intimo",
+        descricao: "Kit com produtos essenciais para o cuidado íntimo, proporcionando limpeza, frescor e proteção.",
+        preco: 83.41,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/kit-1006_1015-637f9b5dc7a27e38ff17423201958418-1024-1024.webp"
+    },
+    {
+        id: 442,
+        marca: "Racco",
+        nome: "Deo Colônia Masculina LF Racco, 100ml",
+        descricao: "Fragrância icônica que celebra o poder masculino, com notas cítricas, especiadas e amadeiradas.",
+        preco: 149.95,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/220_deo-colonia-lf-a6a78c0bdad2da7c4917387564604827-1024-1024.webp"
+    },
+    {
+        id: 443,
+        marca: "Racco",
+        nome: "IOS Maxxi 30+ em Cápsulas Racco, 30 cápsulas",
+        descricao: "Suplemento com minerais antioxidantes que previnem o envelhecimento e estimulam a produção de colágeno.",
+        preco: 89.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/954_ios-maxxi30-2e7a90b81f7f03b56417394689335018-1024-1024.webp"
+    },
+    {
+        id: 444,
+        marca: "Racco",
+        nome: "Spray de Hidratação Intensiva para os Pés Principles Racco, 50ml",
+        descricao: "Com derivado da Ureia, trata ressecamentos, fissuras e asperezas dos pés, com hidratação intensiva.",
+        preco: 59.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1307_spray-de-hidratacao-intensiva-para-os-pes-principles-racco-cf938dfcb2c453db7517412044602810-1024-1024.webp"
+    },
+    {
+        id: 445,
+        marca: "Racco",
+        nome: "Sérum DMAE + Polissacarídeos RaccoDerma,10ml",
+        descricao: "Sérum com efeito tensor e ação antipoluição, que repara e reestrutura a pele, deixando-a mais firme.",
+        preco: 59.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5537_serum-dmae-e-polissacarideos-raccoderma-ea3c545baf336f901a17387587492684-1024-1024.webp"
+    },
+    {
+        id: 446,
+        marca: "Racco",
+        nome: "Creme Revitalizante para Face e Corpo Multi Aloe Racco, 50g",
+        descricao: "Com extratos de Aloe e Confrei, hidrata profundamente, protege a pele e possui propriedades calmantes.",
+        preco: 59.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/creme-revitalizante-para-face-e-corpo-multi-aloe-racco-62a8ff5ffd08e6af5817387560961069-1024-1024.webp"
     },
-    {
-        id: 3,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA FEMININA KIAORA RACCO 100ml',
-        descricao: 'Acordes florientais frutais com Notas Verdes, Laranja e Mandarina, combinadas a Neroli, Jasmim e Lírio do Vale.',
-        preco: 179.90, // Preço correto
-        imagem: 'imagens/racco/img103.png'
+    {
+        id: 447,
+        marca: "Racco",
+        nome: "Deo Colônia Emoções Masculino Roberto Carlos Racco, 50ml",
+        descricao: "Fragrância com acordes refrescantes de Bergamota, Mandarina, Grapefruit e notas amadeiradas.",
+        preco: 149.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/368_deo-colonia-emocoes-60cd994a5a163cecf317387566479003-1024-1024.webp"
+    },
+    {
+        id: 448,
+        marca: "Racco",
+        nome: "Sabonete Líquido Facial de Algas Marinhas ARL Racco, 150g",
+        descricao: "Com extrato de Algas e Pantenol, limpa, hidrata e combate os radicais livres. Para peles normais a secas.",
+        preco: 45.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/sabonete-liquido-facial-de-algas-marinhas-arl-racco-150g-316f76faf25d0f90f517387527416699-1024-1024.webp"
+    },
+    {
+        id: 449,
+        marca: "Racco",
+        nome: "Batom Líquido Luzes Racco – Cor de Boca, 3,5g",
+        descricao: "Batom líquido com acabamento matte, alta cobertura e longa duração na clássica Cor de Boca.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/batom-02-25_cor-de-boca-babd04c728edee51c817425646033449-1024-1024.webp"
+    },
+    {
+        id: 450,
+        marca: "Racco",
+        nome: "Gel Hidratante de Massagem Morango Intimo Racco, 65ml",
+        descricao: "Gel para massagem íntima com deliciosa fragrância de morango. Hidrata e proporciona sensação agradável.",
+        preco: 46.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/gel-hidratante-de-massagem-intimo-morango-racco-0760d2d4e9f8bc710617387545056388-1024-1024.webp"
+    },
+    {
+        id: 451,
+        marca: "Racco",
+        nome: "Espuma Micelar de Limpeza Facial Priorage Racco, 100ml",
+        descricao: "Limpeza suave com Ácido Hialurônico e escovinha de silicone para massagem. Pele macia e purificada.",
+        preco: 89.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5541_espuma-micelar-facial-af17480b025eb5404217374642964891-1024-1024.webp"
+    },
+    {
+        id: 452,
+        marca: "Racco",
+        nome: "Base Cremosa com Ácido Hialurônico e Vitamina E Luzes, 40g",
+        descricao: "Base de alta cobertura com Ácido Hialurônico e Vitamina E, que hidrata e tem ação antioxidante.",
+        preco: 69.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/12-11_base-cremosa-luzes-66d80114fd726b78e117401618110384-1024-1024.webp"
+    },
+    {
+        id: 453,
+        marca: "Racco",
+        nome: "IOS Aloe Life - Suplemento Pronto para Beber com Vitamina C - Sabor Aloe Vera e Laranja, 1l",
+        descricao: "Suplemento de Vitamina C com sabor de Aloe Vera e Laranja, que protege e fortalece o organismo.",
+        preco: 109.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/ios-aloe-life-suplemento-pronto-para-beber-com-vitamina-c-sabor-aloe-vera-e-laranja-d9813863420ec9ad4d17387547276191-1024-1024.webp"
+    },
+    {
+        id: 454,
+        marca: "Racco",
+        nome: "Sabonete de Algas Marinhas Savonette ARL Racco - 90g",
+        descricao: "Sabonete em barra com extrato de algas para limpeza diária, hidratação e ação antioxidante.",
+        preco: 29.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1380_sabonete-algas-arl-7354a393ce1eb18c3017387527101005-1024-1024.webp"
+    },
+    {
+        id: 455,
+        marca: "Racco",
+        nome: "Deo Colônia Feminina Racco Oriental, 45ml",
+        descricao: "Combinação de notas florais e amadeiradas que exalta a feminilidade e proporciona presença marcante.",
+        preco: 139.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/221_deo-colonia-racco-oriental_feminino_frasco-e38a1b515483ac6d5d17387565019943-1024-1024.webp"
     },
-    {
-        id: 4,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA FEMININA YUNICK RACCO 100ml',
-        descricao: 'Gourmand floral delicado, com Baunilha, Flor de Laranjeira e Pera, criando uma fragrância exótica e marcante.',
-        preco: 169.90, // Preço atualizado
-        imagem: 'imagens/racco/img99.png'
+    {
+        id: 456,
+        marca: "Racco",
+        nome: "Deo Colônia Feminina Gi Racco, 100ml",
+        descricao: "Fragrância que traz uma explosão frutada e picante de Lichia, Pimenta Rosa e Mandarina.",
+        preco: 299.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/216_deo-colonia-gi-23c786a5c4677eaaf617387564257100-1024-1024.webp"
+    },
+    {
+        id: 457,
+        marca: "Racco",
+        nome: "Deo Colônia Feminina Lilac Racco, 100ml",
+        descricao: "Combinação intensa e vibrante de Cassis, Grapefruit e Mandarina com Jasmim, Muguet e Damasco.",
+        preco: 119.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/214_deocolonia_lilac-f66e77fb36b546d16f17387563959765-1024-1024.webp"
+    },
+    {
+        id: 458,
+        marca: "Racco",
+        nome: "Sérum Ácido Glicólico + Niacinamida Raccoderma, 10ml",
+        descricao: "Sérum concentrado que hidrata e promove um peeling suave, acelerando a renovação celular.",
+        preco: 59.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/serum-acido-glicolico-niacinamida-raccoderma-07a609e1c73b45d07517413549559761-1024-1024.webp"
+    },
+    {
+        id: 459,
+        marca: "Racco",
+        nome: "Máscara Facial Raccoderma, 60g",
+        descricao: "Máscara com Argila Branca que refresca, suaviza a textura, hidrata e purifica a pele.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/mascara-facial-raccoderma-15b89b08e74fc2981717387589033140-1024-1024.webp"
     },
-    {
-        id: 5,
-        marca: 'Racco',
-        nome: 'HIDRATANTE CORPORAL GI RACCO 130ml',
-        descricao: 'Com Óleo de Rosa Mosqueta e Polissacarídeos para manter a hidratação natural da pele, proporcionando conforto e maciez.',
-        preco: 72.90, // Preço atualizado
-        imagem: 'imagens/racco/img111.png'
+    {
+        id: 460,
+        marca: "Racco",
+        nome: "IOS Collagen Life - Colágeno Hidrolisado em Pó Racco, 200g",
+        descricao: "100% Peptídeos de Colágeno que melhoram a aparência, a elasticidade e a firmeza da pele.",
+        preco: 145.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/928_ios-collagen-life-823abb9b0c033673e217387546283025-1024-1024.webp"
     },
-    {
-        id: 6,
-        marca: 'Racco',
-        nome: 'HIDRATANTE DESODORANTE CORPORAL ILUMINADOR ALLUMAGE RACCO 55g',
-        descricao: 'Com partículas de brilho para efeito glow, textura leve e toque seco. Hidrata, ilumina e perfuma com a fragrância Allumage.',
-        preco: 39.90, // Preço atualizado
-        imagem: 'imagens/racco/img119.png'
+    {
+        id: 461,
+        marca: "Racco",
+        nome: "Deo Colônia Feminina Yunick, 100ml",
+        descricao: "Fragrância gourmand floral marcante, com doçura da Baunilha e refrescância da Flor de Laranjeira.",
+        preco: 165.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/deo-colonia-feminina-yunick-db7416ebd42289d4fd17387570076545-1024-1024.webp"
     },
-    {
-        id: 7,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA MASCULINA LF RACCO 100ml',
-        descricao: 'Notas cítricas, especiadas e amadeiradas, com Pimenta-da-Jamaica, Hortelã, Âmbar, Musk e Cedro.',
-        preco: 299.90, // Preço correto
-        imagem: 'imagens/racco/img338.png'
+    {
+        id: 462,
+        marca: "Racco",
+        nome: "Sérum Corporal Carnivore Ciclos Racco, 10ml",
+        descricao: "Com hidrolisado de planta carnívora, estimula a quebra da gordura e melhora os contornos corporais.",
+        preco: 44.95,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5529_serum-carnivore-9e975f9079b72a0cc017387529331510-1024-1024.webp"
     },
-    {
-        id: 8,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA FEMININA GI RACCO 100ml',
-        descricao: 'Explosão frutada e picante de Lichia, Pimenta Rosa e Mandarina, com notas de Jasmim, Rosa e Caramelo e fundo de Âmbar, Vetiver, Musk e Vanilla.',
-        preco: 299.90, // Preço correto
-        imagem: 'imagens/racco/img342.png'
+    {
+        id: 463,
+        marca: "Racco",
+        nome: "Hidratante Corporal Gi, 130ml",
+        descricao: "Hidratante desodorante com textura leve, Óleo de Rosa Mosqueta e Polissacarídeos para maciez.",
+        preco: 69.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/2925_hidratante-gi-33695b9403dacade3417387567426473-1024-1024.webp"
     },
-    {
-        id: 9,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA MASCULINA NU RACCO 100ml',
-        descricao: 'Notas de Limão Siciliano, Lavanda e Gerânio sobre fundo de Sândalo e Musk.',
-        preco: 159.90, // Preço correto
-        imagem: 'imagens/racco/img452.png'
+    {
+        id: 464,
+        marca: "Racco",
+        nome: "IOS Coenzima Q10 - Suplemento Alimentar de Coenzima Q10 com Vitamina E em Cápsulas Racco, 30 cápsulas",
+        descricao: "Suplemento com Coenzima Q10 e Vitamina E para energia celular, saúde cardiovascular e pele saudável.",
+        preco: 129.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/965_ios-coenzima-q10-suplemento-alimentar-de-coenzima-q10-vitamina-e-b42f26e039de297d6817485262247084-1024-1024.webp"
     },
-    {
-        id: 10,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA MASCULINA THESU RACCO 100ml',
-        descricao: 'Notas de Gengibre, Pimenta e Noz-moscada associadas a Âmbar, Cedro e Musk, criando fragrância luxuosa e ousada.',
-        preco: 169.90, // Preço correto
-        imagem: 'imagens/racco/img463.png'
+    {
+        id: 465,
+        marca: "Racco",
+        nome: "Máscara Nanotecnológica Serie Premium Tratamento Racco, 230g",
+        descricao: "Máscara com Nanopartículas de Sericina, Queratina e Colágeno para regeneração e hidratação dos fios.",
+        preco: 99.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1810_mascara-nano-serie-premium-ae2e8b12b3d8ee765617387594966268-1024-1024.webp"
     },
-    {
-        id: 11,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA MASCULINA OXUS RACCO 100ml',
-        descricao: 'Mistura de Lima, Pamplemousse, Gengibre, Cardamomo, Pimenta e Madeira Seca, resultando em perfume oriental amadeirado moderno.',
-        preco: 169.90, // Preço correto
-        imagem: 'imagens/racco/img467.png'
+    {
+        id: 466,
+        marca: "Racco",
+        nome: "Água Micelar Ciclos Racco, 150ml",
+        descricao: "Água micelar que limpa, demaquila, purifica, suaviza e reequilibra a pele em um único passo.",
+        preco: 77.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/agua-micelar-ciclos-d-racco-d62591279fecd5016717387530384496-1024-1024.webp"
     },
-    {
-        id: 12,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA EMOÇÕES MASCULINA ROBERTO CARLOS RACCO 50ml',
-        descricao: 'Acordes de Bergamota, Mandarina, Grapefruit, Damasco, Cedro, Sândalo, Musk, Âmbar e Patchouli.',
-        preco: 169.90, // Preço correto
-        imagem: 'imagens/racco/img606.png'
+    {
+        id: 467,
+        marca: "Racco",
+        nome: "Batom Líquido Luzes Racco – Rosa Nude, 3,5g",
+        descricao: "Batom líquido com acabamento matte, alta cobertura e longa duração na elegante cor Rosa Nude.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/batom-02-27_rosa-nude-d65832cb5aff85124417425650381384-1024-1024.webp"
     },
-    {
-        id: 13,
-        marca: 'Racco',
-        nome: 'DEO COLÔNIA LEANDRO RACCO 100ml',
-        descricao: 'Notas de Absinto, Artemísia, Flor de Laranjeira, Bergamota, Cardamomo, Lavanda, Cedro, Sândalo, Âmbar amadeirado, Canela, Cominho, Menta e Baunilha.',
-        preco: 149.90, // Preço correto
-        imagem: 'imagens/racco/img602.png'
+    {
+        id: 468,
+        marca: "Racco",
+        nome: "Protetor Solar Facial FPS 50 com Cor Soleil Racco, 40g",
+        descricao: "Alta proteção solar com Vitamina E, efeito tonalizante natural e toque seco com acabamento matte.",
+        preco: 129.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/3051_protetor-facial-com-cor-soleil_novo-bfc75d60f555af62b117387595212533-1024-1024.webp"
     },
-    {
-        id: 14,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO ÍNTIMO MASCULINO FOR MEN RACCO 180ml',
-        descricao: 'Frescor duradouro, equilíbrio do pH e ação calmante com Provitamina B5 e Óleo de Menta.',
-        preco: 49.90, // Preço correto
-        imagem: 'imagens/racco/img610.png'
+    {
+        id: 469,
+        marca: "Racco",
+        nome: "Gel Creme Facial Glicerina + Vitamina E RaccoDerma, 60g",
+        descricao: "Hidratante antioxidante para os primeiros sinais de envelhecimento, com textura refrescante e toque seco.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5531_gel-creme-facial-glicerina-e-vitamina-e-raccoderma-ec38ca1b1b23c4f36217387587138594-1024-1024.webp"
     },
-    {
-        id: 15,
-        marca: 'Racco',
-        nome: 'DESODORANTE ÍNTIMO JATO SECO FOR MEN RACCO 100ml',
-        descricao: 'Ação refrescante, perfume suave, toque seco e teste urológico aprovado.',
-        preco: 49.90, // Preço correto
-        imagem: 'imagens/racco/img614.png'
+    {
+        id: 470,
+        marca: "Racco",
+        nome: "Fibra Life Refresh - Pó para Bebida com Fibra Prebiótica - Chá Verde Sabor Limão Racco, 200g",
+        descricao: "Bebida refrescante com Chá Verde e Mate que equilibra a flora intestinal e ajuda a gerenciar o peso.",
+        preco: 65.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/915_fibra-refresh-cha-verde-limao-5b0911084081855a1617387549590361-1024-1024.webp"
     },
-    {
-        id: 16,
-        marca: 'Racco',
-        nome: 'ÁGUA PERFUMADA DESODORANTE REFRESCANTE CORPORAL - LAVANDA & ROSA & MUSK 100ml',
-        descricao: 'Aroma suave e delicado de Lavanda, Rosa e Almíscar para frescor e tranquilidade.',
-        preco: 34.90, // Preço correto
-        imagem: 'imagens/racco/img815.png'
+    {
+        id: 471,
+        marca: "Racco",
+        nome: "Creme Relaxante para as Pernas Defatigant Multi Aloe, 120g",
+        descricao: "Creme com Aloe Vera que relaxa e refresca pernas e pés cansados, aumentando a tonicidade da pele.",
+        preco: 58.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1425_creme-relaxante-para-as-pernas-defatigant-multi-aloe-1e486824d5d2452cf517387560705558-1024-1024.webp"
     },
-    {
-        id: 17,
-        marca: 'Racco',
-        nome: 'ÁGUA PERFUMADA DESODORANTE ENERGIZANTE CORPORAL - CÍTRICOS & GENGIBRE & MUSK 100ml',
-        descricao: 'Notas cítricas e especiadas para energia e alegria no dia.',
-        preco: 34.90, // Preço correto
-        imagem: 'imagens/racco/img823.png'
+    {
+        id: 472,
+        marca: "Racco",
+        nome: "FLUIDO ENDURECEDOR DE UNHAS LUZES RACCODERMA 7 ML - 50/10",
+        descricao: "Fortalece e hidrata unhas com Queratina, Pantenol e Biotina, evitando quebra e lascas.",
+        preco: 39.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/50-10_fluido-endurecedor-de-unhas-luzes-4c466ade7b10c535ff17387559202374-1024-1024.webp"
     },
-    {
-        id: 18,
-        marca: 'Racco',
-        nome: 'ÁGUA PERFUMADA DESODORANTE RELAXANTE PARA CORPO E AMBIENTES - LAVANDA & CAMOMILA 100ml',
-        descricao: 'Fragrâncias relaxantes que aliviam o estresse e ajudam no sono.',
-        preco: 34.90, // Preço correto
-        imagem: 'imagens/racco/img819.png'
+    {
+        id: 473,
+        marca: "Racco",
+        nome: "Protetor Solar Facial FPS 70 Soleil Racco, 40g",
+        descricao: "Altíssima proteção facial com ação antioxidante, que previne os sinais do fotoenvelhecimento.",
+        preco: 99.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/3054_protetor-solar-facial-fps-70-soleil-racco-65faf9da3a4ccba11b17387595480631-1024-1024.webp"
     },
-    {
-        id: 19,
-        marca: 'Racco',
-        nome: 'KIT ÁGUAS PERFUMADAS RACCO 3 frascos de 100ml',
-        descricao: 'Conjunto com 3 fragrâncias: Calma, Energia e Encanto.',
-        preco: 99.90, // Preço correto
-        imagem: 'imagens/racco/img811.png'
+    {
+        id: 474,
+        marca: "Racco",
+        nome: "Deo Colônia Masculina Oxus Racco, 100ml",
+        descricao: "Perfume oriental amadeirado com notas de Lima, Gengibre e Pimenta, para homens de estilo autêntico.",
+        preco: 169.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/177_deo-colonia-oxus-1e75bde904c3c61fcf17387563363339-1024-1024.webp"
     },
-    {
-        id: 20,
-        marca: 'Racco',
-        nome: 'HIDRATANTE CORPORAL KARITÉ MAIS PURA RACCO 250g',
-        descricao: 'Hidrata e deixa a pele macia com fragrância suave de Baunilha.',
-        preco: 69.90, // Preço correto
-        imagem: 'imagens/racco/img1006.png'
+    {
+        id: 475,
+        marca: "Racco",
+        nome: "Deo Colônia Masculina Thesu Racco, 100ml",
+        descricao: "Fragrância luxuosa e ousada com notas quentes de Gengibre, Pimenta e Noz-moscada.",
+        preco: 169.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/deo-colonia-masculina-thesu-racco-87d3b6336267c635e717387570744527-1024-1024.webp"
     },
-    {
-        id: 21,
-        marca: 'Racco',
-        nome: 'HIDRATANTE CORPORAL ALGODÃO MAIS PURA RACCO 250g',
-        descricao: 'Hidratação profunda, pele macia e aveludada com fragrância suave.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img1002.png'
+    {
+        id: 476,
+        marca: "Racco",
+        nome: "Sérum Rosa Mosqueta + Esqualano Vegetal RaccoDerma, 10ml",
+        descricao: "Sérum com textura leve que hidrata, protege e restaura a elasticidade da pele.",
+        preco: 59.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5538_serum-rosa-mosqueta-e-esqualano-vegetal-raccoderma-096b38012d2ec90cf117387587665125-1024-1024.webp"
     },
-    {
-        id: 22,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO MAIS PURA RACCO 250ml',
-        descricao: 'Espuma cremosa que proporciona sensação agradável no banho.',
-        preco: 45.90, // Preço correto
-        imagem: 'imagens/racco/img998.png'
+    {
+        id: 477,
+        marca: "Racco",
+        nome: "Água Perfumada Overdose Sensual Racco, 210ml",
+        descricao: "Fragrância oriental sensual com notas de Laranja, Pêssego, Jasmim, Chocolate e Baunilha.",
+        preco: 149.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/agua-perfumada-overdose-sensual-racco-f50c1e18fde47ed99417387561778329-1024-1024.webp"
     },
-    {
-        id: 23,
-        marca: 'Racco',
-        nome: 'SHAMPOO MAIS PURA RACCO 250ml',
-        descricao: 'Melhora o aspecto dos fios, deixando-os mais macios e sedosos.',
-        preco: 42.90, // Preço atualizado
-        imagem: 'imagens/racco/img994.png'
+    {
+        id: 478,
+        marca: "Racco",
+        nome: "Óleo Relaxante Desodorante para as Pernas Defatigant Multi Aloe Racco, 100ml",
+        descricao: "Óleo com Aloe Vera que proporciona relaxamento, refrescância e hidratação para pernas e pés cansados.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/oleo-relaxante-desodorante-para-as-pernas-defatigant-multi-aloe-racco-214295ffae22756ccb17387561109169-1024-1024.webp"
     },
-    {
-        id: 24,
-        marca: 'Racco',
-        nome: 'CONDICIONADOR MAIS PURA RACCO 250g',
-        descricao: 'Facilita o pentear e mantém a fragrância por mais tempo.',
-        preco: 49.90, // Preço correto
-        imagem: 'imagens/racco/img995.png'
+    {
+        id: 479,
+        marca: "Racco",
+        nome: "Batom Líquido Luzes Racco – Cereja, 3,5g",
+        descricao: "Batom líquido com acabamento matte, alta cobertura e longa duração na vibrante cor Cereja.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/batom-02-26_cereja-a6cc2f7ee1487fd46617425648803909-1024-1024.webp"
     },
-    {
-        id: 25,
-        marca: 'Racco',
-        nome: 'ÁGUA PERFUMADA OVERDOSE SENSUAL RACCO 210ml',
-        descricao: 'Fragrância oriental sensual com notas de Laranja Brasil, Bergamota, Pêssego, Flor de Laranjeira, Jasmim, Rosa, Sândalo, Chocolate e Baunilha.',
-        preco: 149.90, // Preço correto
-        imagem: 'imagens/racco/img982.png'
+    {
+        id: 480,
+        marca: "Racco",
+        nome: "Overdose Blanc Hidratante Desodorante Corporal Chocolate Branco Racco, 150g",
+        descricao: "Hidratante com Manteiga de Karité e notas de Chocolate Branco para um toque doce e aveludado.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1121_overdose_chocoblanc-cef562e0df3c960fa917387561549436-1024-1024.webp"
     },
-    {
-        id: 26,
-        marca: 'Racco',
-        nome: 'HIDRATANTE DESODORANTE CORPORAL CHOCOBLANC OVERDOSE RACCO 150g',
-        descricao: 'Com Manteiga de Karité e notas de Chocolate Branco para toque doce e aveludado.',
-        preco: 49.90, // Preço correto
-        imagem: 'imagens/racco/img986.png'
+    {
+        id: 481,
+        marca: "Racco",
+        nome: "Óleo Essencial Corporal Alecrim Bio Therapy Racco, 10ml",
+        descricao: "Óleo essencial de Alecrim que estimula e revigora o corpo e a mente, aumentando a disposição.",
+        preco: 69.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1098_oleo-alecrim-bio-therapy-26ec5ee75c7c7b4a4417387528401567-1024-1024.webp"
     },
-    {
-        id: 27,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO ÍNTIMO FEMININO RACCO 210ml',
-        descricao: 'Higiene íntima diária, limpeza delicada e sensação de frescor.',
-        preco: 43.90, // Preço correto
-        imagem: 'imagens/racco/img1230.png'
+    {
+        id: 482,
+        marca: "Racco",
+        nome: "Desodorante Roll-on Lutti Racco, 55ml",
+        descricao: "Proteção eficaz contra odores com fragrância suave e delicada, com ação prebiótica.",
+        preco: 21.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/341_desodorante-roll-on-lutti-dd692f4801ef7fa76717387581906361-1024-1024.webp"
     },
-    {
-        id: 28,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO ÍNTIMO MORANGO FEMININO RACCO 210ml',
-        descricao: 'Com Óleo Essencial de Menta para refrescância e limpeza delicada.',
-        preco: 43.90, // Preço correto
-        imagem: 'imagens/racco/img1254.png'
+    {
+        id: 483,
+        marca: "Racco",
+        nome: "Deo Colônia Feminina Kiaora Racco, 100ml",
+        descricao: "Fragrância floriental frutal que evoca sensualidade, com notas de Laranja, Jasmim e Lírio do Vale.",
+        preco: 165.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/deo-colonia-feminina-kiaora-racco-c4a3498ad1d25de19c17387569710644-1024-1024.webp"
     },
-    {
-        id: 29,
-        marca: 'Racco',
-        nome: 'SPRAY PERFUMADO DESODORANTE ÍNTIMO MORANGO FEMININO RACCO 120ml',
-        descricao: 'Desodorização eficaz e fragrância deliciosa de Morango.',
-        preco: 39.90, // Preço correto
-        imagem: 'imagens/racco/img1258.png'
+    {
+        id: 484,
+        marca: "Racco",
+        nome: "Protetor Solar Facial FPS 30 Soleil Racco, 40g",
+        descricao: "Protege a pele contra os sinais de fotoenvelhecimento, com ação antioxidante e toque seco.",
+        preco: 79.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/protetor-solar-facial-fps-30-soleil-racco-d5ac7f1b26778dd7f117387595924420-1024-1024.webp"
     },
-    {
-        id: 30,
-        marca: 'Racco',
-        nome: 'DESODORANTE ÍNTIMO JATO SECO RACCO 100ml',
-        descricao: 'Fragrância suave e refrescante de longa duração, com jato seco.',
-        preco: 43.90, // Preço correto
-        imagem: 'imagens/racco/img1234.png'
+    {
+        id: 485,
+        marca: "Racco",
+        nome: "Sabonete Líquido Mais Pura Racco, 250ml",
+        descricao: "Sabonete líquido com espuma cremosa que proporciona uma agradável sensação no banho.",
+        preco: 32.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/sabonete-liquido-mais-pura-racco-68c282b4070c4ee33917387560063314-1024-1024.webp"
     },
-    {
-        id: 31,
-        marca: 'Racco',
-        nome: 'ESPUMA DE HIGIENE ÍNTIMA REFRESCANTE INTIMO RACCO 50ml',
-        descricao: 'Higiene íntima sem enxágue, hidrata e perfuma com sensação refrescante.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img1250.png'
+    {
+        id: 486,
+        marca: "Racco",
+        nome: "Sérum Ácido Hialurônico Ciclos Racco, 40ml",
+        descricao: "Sérum que hidrata, melhora rugas finas e deixa a pele mais firme, elástica e viçosa.",
+        preco: 158.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/serum-acido-hialuronico-34a19ede614b9c3fe817387539461291-1024-1024.webp"
     },
-    {
-        id: 32,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO ÍNTIMO PROCTO RACCO 120ml',
-        descricao: 'Com Camomila, Arruda, Gingko Biloba e Castanha-da-índia para limpeza segura e efeito calmante.',
-        preco: 49.90, // Preço correto
-        imagem: 'imagens/racco/img1242.png'
+    {
+        id: 487,
+        marca: "Racco",
+        nome: "Creme Hidratante Facial Priorage 60+ Ciclos Racco, 30g",
+        descricao: "Creme com proteção e hidratação potentes que restaura a pele, melhora o contorno facial e reduz sinais.",
+        preco: 159.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/ciclos-priorage-60-racco-c2f5850d9e9f562d3817387537230302-1024-1024.webp"
     },
-    {
-        id: 33,
-        marca: 'Racco',
-        nome: 'DESODORANTE ÍNTIMO TEC RACCO 50ml',
-        descricao: 'Hidrata, suaviza e perfuma com tecnologia de controle de odor.',
-        preco: 65.90, // Preço correto
-        imagem: 'imagens/racco/img1246.png'
+    {
+        id: 488,
+        marca: "Racco",
+        nome: "Tônico Facial Ciclos Racco, 150ml",
+        descricao: "Tônico sem álcool que complementa a limpeza diária, regula o pH da pele e normaliza os poros dilatados.",
+        preco: 69.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/tonico-facial-ciclos-dracco-76db459b3003a33ce217387541178490-1024-1024.webp"
     },
-    {
-        id: 34,
-        marca: 'Racco',
-        nome: 'GEL HIDRATANTE DE MASSAGEM ÍNTIMO MORANGO RACCO 65ml',
-        descricao: 'Gel para massagem íntima com fragrância de morango, hidrata e proporciona sensação agradável.',
-        preco: 46.90, // Preço correto
-        imagem: 'imagens/racco/img1469.png'
+    {
+        id: 489,
+        marca: "Racco",
+        nome: "Hidratante Desodorante Corporal Secret Berry Overdose Racco, 220g",
+        descricao: "Hidratante corporal com fragrância envolvente de frutas vermelhas, deixando a pele macia e perfumada.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1145_overdose_hid-secretberry-8a4f4674665468bef817466252507286-1024-1024.webp"
     },
-    {
-        id: 35,
-        marca: 'Racco',
-        nome: 'GEL HIDRATANTE DE MASSAGEM ÍNTIMO RACCO 65ml',
-        descricao: 'À base de Glicerina Vegetal, hidrata e amacia a pele sem álcool e sem pegajosidade.',
-        preco: 46.90, // Preço correto
-        imagem: 'imagens/racco/img1465.png'
+    {
+        id: 490,
+        marca: "Racco",
+        nome: "Body Splash Desodorante Secret Berry Overdose Racco, 200ml",
+        descricao: "Body splash com fragrância de frutas vermelhas para perfumar e refrescar a pele ao longo do dia.",
+        preco: 72.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1146_overdose_bs-secretberry-2c2d24c5ce33dc256b17466251689719-1024-1024.webp"
     },
-    {
-        id: 36,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO ÍNTIMO 50+ FEMININO RACCO 180ml',
-        descricao: 'Com Ácido Hialurônico, prebióticos e extratos calmantes, hidrata e protege a região íntima.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img1473.png'
+    {
+        id: 491,
+        marca: "Racco",
+        nome: "Sabonete Líquido Corporal Erva Doce Racco, 250ml",
+        descricao: "Sabonete líquido com a clássica e suave fragrância de Erva Doce, que limpa e perfuma a pele.",
+        preco: 39.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1917-a65ed4c9c502e540f017374867055519-1024-1024.webp"
     },
-    {
-        id: 37,
-        marca: 'Racco',
-        nome: 'MOUSSE SPRAY DEPILATÓRIO DEPEELING SOFT RACCO 150ml',
-        descricao: 'Depilação prática e hidratante com tecnologia antiodor, sem dor ou esforço.',
-        preco: 99.90, // Preço correto
-        imagem: 'imagens/racco/img1591.png'
+    {
+        id: 492,
+        marca: "Racco",
+        nome: "Gel Hidratante Facial Lipogel Racco, 60g",
+        descricao: "Hidratação suave para peles oleosas. Equilibra a oleosidade excessiva sem obstruir os poros.",
+        preco: 59.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1478_gel-hidratante-facial-lipogel-0526442e1464ee129317484339488407-1024-1024.webp"
     },
-    {
-        id: 38,
-        marca: 'Racco',
-        nome: 'MOUSSE SPRAY DEPILATÓRIO DEPEELING RACCO 150ml',
-        descricao: 'Fácil aplicação, elimina pelos em minutos deixando a pele lisa e macia.',
-        preco: 89.90, // Preço correto
-        imagem: 'imagens/racco/img1601.png'
+    {
+        id: 493,
+        marca: "Racco",
+        nome: "Creme Hidratante Facial Priorage 30+ Ciclos Racco, 30g",
+        descricao: "Creme que acelera a produção de colágeno, melhora linhas de expressão e combate o envelhecimento precoce.",
+        preco: 119.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/creme-hidratante-facial-priorage-30-ciclos-racco-d91599e31f5d0e084f17387538372493-1024-1024.webp"
     },
-    {
-        id: 39,
-        marca: 'Racco',
-        nome: 'CREME DEPILATÓRIO DEPEELING RACCO 150g',
-        descricao: 'Com Manteiga de Karité, Pantenol, Calêndula e Aloe Vera, hidrata enquanto remove os pelos.',
-        preco: 79.90, // Preço correto
-        imagem: 'imagens/racco/img1605.png'
+    {
+        id: 494,
+        marca: "Racco",
+        nome: "Condicionador Mais Pura Racco, 250g",
+        descricao: "Condicionador que torna o pentear mais fácil e mantém a fragrância nos fios por mais tempo.",
+        preco: 23.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/condicionador-mais-pura-8e87970bb3fa1fa0e417387559726337-1024-1024.webp"
     },
-    {
-        id: 40,
-        marca: 'Racco',
-        nome: 'CREME REVITALIZANTE PARA FACE E CORPO MULTI ALOE RACCO 50g',
-        descricao: 'Com extratos de Aloe e Confrei, hidrata profundamente e tem propriedades calmantes.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img1836.png'
+    {
+        id: 495,
+        marca: "Racco",
+        nome: "Creme Hidratante Facial Priorage 50+ Racco, 30g",
+        descricao: "Creme com Phyto Retinol e Ácido Hialurônico que hidrata, firma e ilumina as peles maduras.",
+        preco: 139.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5539_creme-facial-50-81e909b280aba47c6a17476614565615-1024-1024.webp"
     },
-    {
-        id: 41,
-        marca: 'Racco',
-        nome: 'CREME RELAXANTE PARA AS PERNAS DEFATIGANT MULTI ALOE RACCO 120g',
-        descricao: 'Relaxante e refrescante para pernas e pés cansados, aumenta tonicidade da pele.',
-        preco: 58.90, // Preço correto
-        imagem: 'imagens/racco/img1840.png'
+    {
+        id: 496,
+        marca: "Racco",
+        nome: "Sabonete Líquido Cintilante Rubi Racco, 150ml",
+        descricao: "Sabonete líquido com partículas cintilantes e fragrância sensual para uma pele macia e perfumada.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1178_sabonete-cintilante-rubi-879acf59a12603523317387593894832-1024-1024.webp"
     },
-    {
-        id: 42,
-        marca: 'Racco',
-        nome: 'CREME DENTAL COM FLÚOR MULTI ALOE RACCO 90g',
-        descricao: 'Com sabor menta, previne cáries e gengivite, deixando os dentes mais brancos.',
-        preco: 29.90, // Preço correto
-        imagem: 'imagens/racco/img1844.png'
+    {
+        id: 497,
+        marca: "Racco",
+        nome: "Sérum Hidratante para a Área dos Olhos Optique Ciclos Racco, 15ml",
+        descricao: "Sérum com Ouro em pó, DMAE e Caviar Negro. Possui ação antioxidante e anti-idade para a área dos olhos.",
+        preco: 99.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5527_serum-hidratante-para-area-dos-olhos-optique-ciclos-bc50a144668468a6d417387529084494-1024-1024.webp"
     },
-    {
-        id: 43,
-        marca: 'Racco',
-        nome: 'ÓLEO RELAXANTE DESODORANTE PARA AS PERNAS DEFATIGANT MULTI ALOE RACCO 100ml',
-        descricao: 'Proporciona relaxamento e hidratação para pernas e pés cansados.',
-        preco: 55.90, // Preço correto
-        imagem: 'imagens/racco/img1832.png'
+    {
+        id: 498,
+        marca: "Racco",
+        nome: "Sérum Facial Noite Ciclos Racco, 30ml",
+        descricao: "Sérum noturno com Diamante e Peptídeos que hidrata e firma a pele, reduzindo sinais de fadiga.",
+        preco: 169.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/serum-facial-noite-ciclos-30ml-7505b54bad94bcec5b17387540520704-1024-1024.webp"
     },
-    {
-        id: 44,
-        marca: 'Racco',
-        nome: 'S.O.S ALOE SPRAY MULTIFUNCIONAL MULTI ALOE RACCO 200ml',
-        descricao: 'Hidrata, acalma e refresca a pele, indicado como pós-sol e para cabelos.',
-        preco: 69.90, // Preço correto
-        imagem: 'imagens/racco/img1824.png'
+    {
+        id: 499,
+        marca: "Racco",
+        nome: "Creme Hidratante para Mãos e Unhas RaccoDerma, 60G",
+        descricao: "Creme com Ureia e Pantenol que hidrata profundamente, regenera e protege mãos, unhas e cutículas.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5534_raccoderma_creme-maos-37da2c8387505e20d917459510827363-1024-1024.webp"
     },
-    {
-        id: 45,
-        marca: 'Racco',
-        nome: 'GEL DE ALOE VERA FORTIFIER MULTI ALOE RACCO 100g',
-        descricao: 'Gel concentrado de Aloe Vera, hidrata e refresca a pele sem resíduos.',
-        preco: 49.90, // Preço correto
-        imagem: 'imagens/racco/img1828.png'
+    {
+        id: 500,
+        marca: "Racco",
+        nome: "Hidratante Desodorante Corporal Iluminador Allumage Racco, 55g",
+        descricao: "Hidratante corporal com partículas de brilho para um efeito glow, com textura leve e toque seco.",
+        preco: 35.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1195_hidratante-iluminador-allumage-0563fce90d62063cea17389564098349-1024-1024.webp"
     },
-    {
-        id: 46,
-        marca: 'Racco',
-        nome: 'SPRAY DE HIDRATAÇÃO INTENSIVA PARA OS PÉS PRINCIPLES RACCO 50ml',
-        descricao: 'Com derivado da ureia para tratar ressecamentos e asperezas dos pés.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img2082.png'
+    {
+        id: 501,
+        marca: "Racco",
+        nome: "Deo Colônia Feminina Allumage Racco, 100ml",
+        descricao: "Fragrância que celebra o magnetismo, com corpo frutal exótico de Groselha Negra e Pera.",
+        preco: 119.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/212-16fae5f2c84220d79417374793027457-1024-1024.webp"
     },
-    {
-        id: 47,
-        marca: 'Racco',
-        nome: 'CREME DESODORANTE PARA OS PÉS PRINCIPLES RACCO 50g',
-        descricao: 'Com cânfora e mentol, combate odores e mantém a pele hidratada.',
-        preco: 29.90, // Preço correto
-        imagem: 'imagens/racco/img2086.png'
+    {
+        id: 502,
+        marca: "Racco",
+        nome: "IOS Ômega 3 em Cápsulas Racco, 30 cápsulas",
+        descricao: "Suplemento de Óleo de Peixe concentrado, fonte de EPA e DHA para saúde cardiovascular e ação anti-inflamatória.",
+        preco: 99.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/ios-omega-3-em-capsulas-racco-274e0cd83f1b216db717387548666487-1024-1024.webp"
     },
-    {
-        id: 48,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO CINTILANTE RUBI RACCO 150ml',
-        descricao: 'Textura sofisticada com brilho e fragrância sensual de flores e rubis.',
-        preco: 49.90, // Preço correto
-        imagem: 'imagens/racco/img2090.png'
+    {
+        id: 503,
+        marca: "Racco",
+        nome: "Sabonete Líquido Lipogel Racco, 120ml",
+        descricao: "Sabonete com Óleo de Melaleuca e Ácido Salicílico para limpeza e controle da oleosidade excessiva.",
+        preco: 59.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/sabonete-liquido-lipogel-49d7e1383b6177b99a17387557705223-1024-1024.webp"
     },
-    {
-        id: 49,
-        marca: 'Racco',
-        nome: 'DESODORANTE ROLL-ON LUTTI RACCO 55ml',
-        descricao: 'Proteção eficaz contra odores com fragrância suave e ação prebiótica.',
-        preco: 29.90, // Preço correto
-        imagem: 'imagens/racco/img2273.png'
+    {
+        id: 504,
+        marca: "Racco",
+        nome: "Deo Colônia Masculina Malle – 100ml",
+        descricao: "Fragrância masculina marcante e sofisticada, ideal para o homem de personalidade forte.",
+        preco: 149.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/310_deo_colonia_malle-031dabe231d8479d0e17544132343118-1024-1024.webp"
     },
-    {
-        id: 50,
-        marca: 'Racco',
-        nome: 'CREME DESODORANTE ANTITRANSPIRANTE REGULATEUR RACCO POTE 60g',
-        descricao: 'Potente ação antitranspirante com fragrância unissex, evita ressecamento das axilas.',
-        preco: 27.90, // Preço correto
-        imagem: 'imagens/racco/img2283.png'
+    {
+        id: 505,
+        marca: "Racco",
+        nome: "Caneta Massageadora Facial e Corporal Vibra Skin",
+        descricao: "Ponteira elétrica vibratória que massageia, ajuda a espalhar cremes e favorece a absorção dos ativos.",
+        preco: 129.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/14_caneta-massageadora-vibra-skin-1465df6a7f352fb84817411971266104-1024-1024.webp"
     },
-    {
-        id: 51,
-        marca: 'Racco',
-        nome: 'DESODORANTE ROLL-ON ANTIPERSPIRANTE REGULATEUR RACCO 55ml',
-        descricao: 'Ação antiperspirante, combate o mau odor e mantém sensação refrescante.',
-        preco: 27.90, // Preço correto
-        imagem: 'imagens/racco/img2287.png'
+    {
+        id: 506,
+        marca: "Racco",
+        nome: "Deo Colônia Masculina Racco Oriental, 45ml",
+        descricao: "Fragrância masculina com notas de Bergamota, Limão Siciliano e um fundo amadeirado de Patchouli e Musk.",
+        preco: 109.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/222_deo-colonia-racco-oriental_masculino_frasco-6849aa6fa7e6ad8beb17387566101163-1024-1024.webp"
     },
-    {
-        id: 52,
-        marca: 'Racco',
-        nome: 'CREME HIDRATANTE FACIAL PRIORAGE 60+ CICLOS D’RACCO 30g',
-        descricao: 'Proteção e hidratação potentes, melhora contorno facial e reduz sinais de envelhecimento.',
-        preco: 159.90, // Preço correto
-        imagem: 'imagens/racco/img2525.png'
+    {
+        id: 507,
+        marca: "Racco",
+        nome: "Creme Hidratante Facial Pantenol + Manteiga de Karité RaccoDerma, 60g",
+        descricao: "Hidratação prolongada com toque seco. Repara áreas ressecadas e combate os radicais livres.",
+        preco: 89.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5532_creme-hidratante-facial-pantenol-e-manteiga-karite-raccoderma-f86ddaa9dc09cb6c0f17387587313919-1024-1024.webp"
     },
-    {
-        id: 53,
-        marca: 'Racco',
-        nome: 'CREME HIDRATANTE FACIAL PRIORAGE 30+ CICLOS D’RACCO 30g',
-        descricao: 'Acelera a produção de colágeno, melhora linhas de expressão e combate envelhecimento precoce.',
-        preco: 159.90, // Preço correto
-        imagem: 'imagens/racco/img2553.png'
+    {
+        id: 508,
+        marca: "Racco",
+        nome: "Água Perfumada Desodorante Energizante Corporal - Cítricos & Gengibre & Musk, 100ml",
+        descricao: "Fragrância cítrica especiada que transforma o fim do dia em um momento de alegria e energia.",
+        preco: 34.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/219_agua-energizante-36e838b517a6a2024a17418641362105-1024-1024.webp"
     },
-    {
-        id: 54,
-        marca: 'Racco',
-        nome: 'SÉRUM FACIAL NOITE CICLOS D’RACCO 30ml',
-        descricao: 'Contém diamante, peptídeos, DMAE e ativos de uva vermelha para hidratar e firmar a pele.',
-        preco: 169.90, // Preço correto
-        imagem: 'imagens/racco/img2533.png'
+    {
+        id: 509,
+        marca: "Racco",
+        nome: "Água Perfumada Desodorante Refrescante Corporal - Lavanda & Rosa & Musk, 100ml",
+        descricao: "Aroma suave de Lavanda, Rosa e Almíscar que envolve o corpo, proporcionando um início de dia radiante.",
+        preco: 34.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/218_agua-refrescante-e775ad33fef7a40c0217418640630487-1024-1024.webp"
     },
-    {
-        id: 55,
-        marca: 'Racco',
-        nome: 'SÉRUM ÁCIDO HIALURÔNICO CICLOS D’RACCO 40ml',
-        descricao: 'Hidrata, melhora rugas finas e linhas de expressão, deixando a pele firme e saudável.',
-        preco: 158.90, // Preço correto
-        imagem: 'imagens/racco/img2541.png'
+    {
+        id: 510,
+        marca: "Racco",
+        nome: "Água Perfumada Desodorante Relaxante para Corpo e Ambientes - Lavanda & Camomila, 100ml",
+        descricao: "Fragrância relaxante de Lavanda e Camomila que cria um ambiente sereno e alivia o estresse.",
+        preco: 34.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/217_agua-relaxante-20c377fbc95508a87817418639704610-1024-1024.webp"
     },
-    {
-        id: 56,
-        marca: 'Racco',
-        nome: 'CREME ESFOLIANTE FACIAL COM BAMBU CICLOS PEELING RACCO 50g',
-        descricao: 'Esfoliação física suave com extrato de bambu e pró-vitamina B5.',
-        preco: 159.90, // Preço correto
-        imagem: 'imagens/racco/img2517.png'
+    {
+        id: 511,
+        marca: "Racco",
+        nome: "Creme Hidratante para Mãos Erva Doce Racco, 60g",
+        descricao: "Creme para as mãos com a fragrância clássica de Erva Doce, que hidrata e perfuma suavemente.",
+        preco: 39.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1923-17e14403d1a5dcffbe17374868133695-1024-1024.webp"
     },
-    {
-        id: 57,
-        marca: 'Racco',
-        nome: 'SÉRUM HIDRATANTE PARA ÁREA DOS OLHOS OPTIQUE CICLOS D’RACCO 15ml',
-        descricao: 'Com ouro em pó, DMAE e caviar negro, ação antioxidante e anti-idade.',
-        preco: 99.90, // Preço correto
-        imagem: 'imagens/racco/img2537.png'
+    {
+        id: 512,
+        marca: "Racco",
+        nome: "Kit Águas Perfumadas Racco, 3 frascos de 100ml",
+        descricao: "Kit com três águas perfumadas: Calma, Encanto e Energia, para diferentes momentos do seu dia.",
+        preco: 99.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/93852_kit-aguas-92ad4d26e05c270e8617387567970183-1024-1024.webp"
     },
-    {
-        id: 58,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO FACIAL DE ALGAS MARINHAS ARL RACCO 150g',
-        descricao: 'Com extrato de algas e pantenol, limpa, hidrata e combate radicais livres.',
-        preco: 45.90, // Preço correto
-        imagem: 'imagens/racco/img2865.png'
+    {
+        id: 513,
+        marca: "Racco",
+        nome: "Hidratante Desodorante Corporal Sugar Dream Overdose Racco, 220g",
+        descricao: "Hidratante corporal com fragrância doce e envolvente, deixando a pele macia e perfumada.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1114_overdose_hid-sugardream-1b067b0d06450d6e1f17466250203622-1024-1024.webp"
     },
-    {
-        id: 59,
-        marca: 'Racco',
-        nome: 'SABONETE DE ALGAS MARINHAS SAVONETTE ARL RACCO 90g',
-        descricao: 'Extrato de algas para limpeza diária, hidratação e ação antioxidante.',
-        preco: 29.90, // Preço correto
-        imagem: 'imagens/racco/img2861.png'
+    {
+        id: 514,
+        marca: "Racco",
+        nome: "Body Splash Desodorante Sugar Dream Overdose Racco, 200ml",
+        descricao: "Body splash com fragrância doce e marcante para perfumar e refrescar a pele ao longo do dia.",
+        preco: 72.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1115_overdose_bs-sugardream-28399d6bb8f7f872c217466247243072-1024-1024.webp"
     },
-    {
-        id: 60,
-        marca: 'Racco',
-        nome: 'TÔNICO FACIAL CICLOS D’RACCO 150ml',
-        descricao: 'Complementa a limpeza diária, regula pH e reduz poros dilatados.',
-        preco: 69.90, // Preço correto
-        imagem: 'imagens/racco/img2873.png'
+    {
+        id: 515,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Médio Acobreado, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1978_coloraction-9f8c11360c7f8b9cca17449084562823-1024-1024.webp"
     },
-    {
-        id: 61,
-        marca: 'Racco',
-        nome: 'SABONETE LÍQUIDO LIPOGEL RACCO 120ml',
-        descricao: 'Com óleo de melaleuca, ácido salicílico, niacinamida e pantenol, controla oleosidade.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img3015.png'
+    {
+        id: 516,
+        marca: "Racco",
+        nome: "Gel Secativo para Peles Acneicas Lipogel Racco, 60g",
+        descricao: "Tratamento emergencial que diminui o tamanho e a vermelhidão das espinhas, com ação secativa.",
+        preco: 59.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1477_gel-secativo-lipogel-f51af5c2508083708217387557284806-1024-1024.webp"
     },
-    {
-        id: 62,
-        marca: 'Racco',
-        nome: 'GEL HIDRATANTE REDUTOR DE OLEOSIDADE LIPOGEL RACCO 60g',
-        descricao: 'Hidrata peles oleosas, equilibra oleosidade sem obstruir poros.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img3007.png'
+    {
+        id: 517,
+        marca: "Racco",
+        nome: "Protetor Solar Corporal FPS 30 Soleil Racco, 100g",
+        descricao: "Protetor solar corporal com Óleo de Café Verde, que protege e estimula as estruturas de colágeno da pele.",
+        preco: 79.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/protetor-solar-corporal-fps-30-soleil-racco-100g-b3f2c490362d5d65d717387595717456-1024-1024.webp"
     },
-    {
-        id: 63,
-        marca: 'Racco',
-        nome: 'MÁSCARA FACIAL DE ARGILA VERDE LIPOGEL RACCO 60g',
-        descricao: 'Com argila verde, algas, pepino e pantenol, reduz oleosidade e previne acne.',
-        preco: 79.90, // Preço correto
-        imagem: 'imagens/racco/img3003.png'
+    {
+        id: 518,
+        marca: "Racco",
+        nome: "Hidratante Corporal Karité Mais Pura, 250g",
+        descricao: "Hidratante com Manteiga de Karité que deixa a pele macia, aveludada e com uma leve fragrância de Baunilha.",
+        preco: 69.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1350_hidratante-corporal-karite-mais-pura-5f15d8e74c2b7f30e517387559556187-1024-1024.webp"
     },
-    {
-        id: 64,
-        marca: 'Racco',
-        nome: 'GEL SECATIVO PARA PELES ACNEICAS LIPOGEL RACCO 60g',
-        descricao: 'Previne acne e reduz inflamações com ação rápida e invisível.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img3011.png'
+    {
+        id: 519,
+        marca: "Racco",
+        nome: "Emulsão Oxidante 20 Volumes Color.Action Racco, 90ml (1985)",
+        descricao: "Emulsão oxidante cremosa e estabilizada, indicada para utilizar com a Coloração Creme Color.Action.",
+        preco: 13.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1985_coloraction_emulsao-oxidante-ca77440ef265f0654217516334779185-1024-1024.webp"
     },
-    {
-        id: 65,
-        marca: 'Racco',
-        nome: 'SABONETE PARA PELES OLEOSAS E ACNEICAS LIPOGEL RACCO 90g',
-        descricao: 'Com enxofre e glicerina, remove impurezas e oleosidade.',
-        preco: 29.90, // Preço correto
-        imagem: 'imagens/racco/img3019.png'
+    {
+        id: 520,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Preto, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1961_coloraction-fd33973cf41d9058ab17449105012977-1024-1024.webp"
     },
-    {
-        id: 66,
-        marca: 'Racco',
-        nome: 'ESPUMA MICELAR DE LIMPEZA FACIAL PRIORAGE RACCO 100ml',
-        descricao: 'Limpeza suave com ácido hialurônico e extrato de madressilva, inclui escovinha de silicone.',
-        preco: 89.90, // Preço correto
-        imagem: 'imagens/racco/img3231.png'
+    {
+        id: 521,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Claro, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1981_coloraction-b1691cb7c7ac4e0fcb17449082069371-1024-1024.webp"
     },
-    {
-        id: 67,
-        marca: 'Racco',
-        nome: 'CREME HIDRATANTE FACIAL PRIORAGE 50+ RACCO 30g',
-        descricao: 'Com phyto retinol, niacinamida, ácido hialurônico e vitamina B5 para hidratar, firmar e iluminar peles maduras.',
-        preco: 139.90, // Preço correto
-        imagem: 'imagens/racco/img3227(1).png'
+    {
+        id: 522,
+        marca: "Racco",
+        nome: "Caixa Presente Premium Racco",
+        descricao: "Caixa de presente sofisticada e elegante, ideal para montar kits e presentear com os produtos Racco.",
+        preco: 32.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/635-920726c3a3877feb6317374832060251-1024-1024.webp"
     },
-    {
-        id: 68,
-        marca: 'Racco',
-        nome: 'GEL CREME FACIAL GLICERINA + VITAMINA E RACCODERMA 60g',
-        descricao: 'Hidratação antioxidante para primeiros sinais de envelhecimento, com toque seco.',
-        preco: 89.90, // Preço correto
-        imagem: 'imagens/racco/img3471.png'
+    {
+        id: 523,
+        marca: "Racco",
+        nome: "Refil Espuma Micelar de Limpeza Facial Priorage Racco, 100ml",
+        descricao: "Refil da Espuma Micelar de Limpeza, uma opção econômica e sustentável para o seu cuidado diário.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/5541-r_espuma-micelar-facial_refil-9f91db650333e4740917374644049647-1024-1024.webp"
     },
-    {
-        id: 69,
-        marca: 'Racco',
-        nome: 'CREME HIDRATANTE FACIAL PANTENOL + MANTEIGA DE KARITÉ RACCODERMA 60g',
-        descricao: 'Hidrata, repara áreas ressecadas e combate radicais livres.',
-        preco: 89.90, // Preço correto
-        imagem: 'imagens/racco/img3479.png'
+    {
+        id: 524,
+        marca: "Racco",
+        nome: "Óleo Essencial Corporal Lavanda Bio Therapy, 10ml",
+        descricao: "Óleo essencial de Lavanda, reconhecido por suas propriedades calmantes e relaxantes para corpo e mente.",
+        preco: 119.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1088_oleo-lavanda-bio-therapy-434069203c1714f89917387527990781-1024-1024.webp"
     },
-    {
-        id: 70,
-        marca: 'Racco',
-        nome: 'MÁSCARA FACIAL RACCODERMA 60g',
-        descricao: 'Refresca, suaviza textura, hidrata e purifica a pele.',
-        preco: 69.90, // Preço correto
-        imagem: 'imagens/racco/img3443.png'
+    {
+        id: 525,
+        marca: "Racco",
+        nome: "Deo Colônia Masculina Malle Intense – 100ml",
+        descricao: "Uma versão mais intensa e marcante da fragrância Malle, para o homem de personalidade forte.",
+        preco: 149.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/148_deo_colonia_malle_intense-e7d19559769412733417544134615866-1024-1024.webp"
     },
-    {
-        id: 71,
-        marca: 'Racco',
-        nome: 'CREME HIDRATANTE PARA MÃOS E UNHAS RACCODERMA 60g',
-        descricao: 'Com ureia, pantenol e óleo de amêndoas para hidratar e proteger mãos e unhas.',
-        preco: 49.90, // Preço correto
-        imagem: 'imagens/racco/img3447.png'
+    {
+        id: 526,
+        marca: "Racco",
+        nome: "Kit Facial 50+",
+        descricao: "Kit com produtos de tratamento facial específicos para as necessidades da pele madura 50+.",
+        preco: 127.7,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/design-sem-nome-18-a542a06e79e23f096d17543141566735-1024-1024.webp"
     },
-    {
-        id: 72,
-        marca: 'Racco',
-        nome: 'SÉRUM ÁCIDO GLICÓLICO + NIACINAMIDA RACCODERMA 10ml',
-        descricao: 'Hidrata e realiza peeling suave para renovação celular.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img3451.png'
+    {
+        id: 527,
+        marca: "Racco",
+        nome: "Emulsão Oxidante 30 Volumes Color.Action Racco, 90ml",
+        descricao: "Emulsão oxidante cremosa e estabilizada, indicada para utilizar com a Coloração Creme Color.Action.",
+        preco: 13.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/d7efdc3e-68e0-4690-9a65-2dbc101269e7-5b37ccc1732d9bba6a17516336358293-1024-1024.webp"
     },
-    {
-        id: 73,
-        marca: 'Racco',
-        nome: 'SÉRUM DMAE + POLISSACARÍDEOS RACCODERMA 10ml',
-        descricao: 'Efeito tensor e antipoluição, repara e reestrutura a pele.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img3459.png'
+    {
+        id: 528,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Preto Azulado, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1962_coloraction-8f08cb921b6cce7f2017449104156777-1024-1024.webp"
     },
-    {
-        id: 74,
-        marca: 'Racco',
-        nome: 'SÉRUM ROSA MOSQUETA + ESQUALANO VEGETAL RACCODERMA 10ml',
-        descricao: 'Hidrata, protege e restaura elasticidade da pele.',
-        preco: 59.90, // Preço correto
-        imagem: 'imagens/racco/img3467.png'
+    {
+        id: 529,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Loiro Muito Claro, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1963_coloraction-37ff01e74ef927d7b417449103242343-1024-1024.webp"
     },
-    {
-        id: 75,
-        marca: 'Racco',
-        nome: 'GEL CORPORAL REDUTOR DE MEDIDAS CICLOS D’RACCO 190g',
-        descricao: 'Com mentol e cânfora, tonifica a pele e ajuda a eliminar toxinas.',
-        preco: 76.90, // Preço correto
-        imagem: 'imagens/racco/img3830.png'
+    {
+        id: 530,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Castanho Escuro, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1964_coloraction-244e353bea03e9d96a17449102050516-1024-1024.webp"
     },
-    {
-        id: 76,
-        marca: 'Racco',
-        nome: 'SÉRUM CORPORAL ANTICELULITE COM DMAE CICLOS D’RACCO 200ml',
-        descricao: 'Ativos que reduzem celulite, atenuam flacidez e hidratam a pele.',
-        preco: 159.90, // Preço correto
-        imagem: 'imagens/racco/img3834.png'
+    {
+        id: 531,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Castanho Médio, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1966_coloraction-9d3c219ae6449eeda817449101013717-1024-1024.webp"
     },
-    {
-        id: 77,
-        marca: 'Racco',
-        nome: 'SÉRUM CORPORAL CARNIVORE CICLOS D’RACCO 10ml',
-        descricao: 'Com hidrolisado de planta carnívora, estimula quebra de gordura e melhora contornos corporais.',
-        preco: 89.90, // Preço correto
-        imagem: 'imagens/racco/img3838.png'
+    {
+        id: 532,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Castanho Claro, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1967_coloraction-e4d2c64cd9f342778017449099937778-1024-1024.webp"
     },
-    {
-        id: 78,
-        marca: 'Racco',
-        nome: 'PROTETOR SOLAR CORPORAL FPS 30 SOLEIL RACCO 100g',
-        descricao: 'Com óleo de café verde e alistin, indicado para peles claras que desejam maior bronzeamento.',
-        preco: 99.90, // Preço correto
-        imagem: 'imagens/racco/img4003.png'
+    {
+        id: 533,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Marsala, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1968_coloraction-508d87897487034cb917449098461642-1024-1024.webp"
     },
-    {
-        id: 79,
-        marca: 'Racco',
-        nome: 'PROTETOR SOLAR FACIAL FPS 70 SOLEIL RACCO 40g',
-        descricao: 'Altíssima proteção facial, ação antioxidante e prevenção do fotoenvelhecimento.',
-        preco: 99.90, // Preço correto
-        imagem: 'imagens/racco/img3999.png'
+    {
+        id: 534,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Castanho Tabaco Escuro, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1969_coloraction-f6579e314981401c2117449094023005-1024-1024.webp"
     },
-    {
-        id: 80,
-        marca: 'Racco',
-        nome: 'PROTETOR SOLAR FACIAL FPS 30 SOLEIL RACCO 40g',
-        descricao: 'Protege contra sinais de fotoenvelhecimento, com ação antioxidante.',
-        preco: 129.90, // Preço correto
-        imagem: 'imagens/racco/img4007.png'
+    {
+        id: 535,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Escuro, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1971_coloraction-578689afe16f253c2017449092556896-1024-1024.webp"
     },
-    {
-        id: 81,
-        marca: 'Racco',
-        nome: 'PROTETOR SOLAR FACIAL FPS 50 COM COR SOLEIL RACCO 40g',
-        descricao: 'Proteção avançada com efeito tonalizante natural e toque seco.',
-        preco: 129.90, // Preço correto
-        imagem: 'imagens/racco/img4015.png'
-    },
-    {
-        id: 82,
-        marca: 'Racco',
-        nome: 'FLUIDO ENDURECEDOR DE UNHAS LUZES 7ml',
-        descricao: 'Fortalece e hidrata unhas com queratina hidrolisada, pantenol e biotina.',
-        preco: 39.90, // Preço correto
-        imagem: 'imagens/racco/img4011.png'
-    },
-    {
-        id: 83,
-        marca: 'Racco',
-        nome: 'BASE CREMOSA COM ÁCIDO HIALURÔNICO E VITAMINA E LUZES RACCO 40g',
-        descricao: 'Alta cobertura, hidratação e ação antioxidante para pele facial.',
-        preco: 69.90, // Preço correto
-        imagem: 'imagens/racco/img4019.png'
-    },
-    {
-        id: 84,
-        marca: 'Racco',
-        nome: 'CANETA MASSAGEADORA FACIAL E CORPORAL VIBRA SKIN RACCO',
-        descricao: 'Ponteira elétrica vibratória que massageia e ajuda na permeação de ativos.',
-        preco: 129.90, // Preço correto
-        imagem: 'imagens/racco/img4020.png'
-    },
-    {
-        id: 85,
-        marca: 'Racco',
-        nome: 'ÓLEO ESSENCIAL CORPORAL ALECRIM BIO THERAPY RACCO 10ml',
-        descricao: 'Estimula e revigora corpo e mente, aumentando disposição e concentração.',
-        preco: 119.90, // Preço correto
-        imagem: 'imagens/racco/img4260.png'
-    },
-    {
-        id: 86,
-        marca: 'Racco',
-        nome: 'ÓLEO ESSENCIAL CORPORAL LAVANDA BIO THERAPY 10ml',
-        descricao: 'Propriedades calmantes e relaxantes para corpo e mente.',
-        preco: 119.90, // Preço correto
-        imagem: 'imagens/racco/img4268.png'
-    },
-    {
-        id: 87,
-        marca: 'Racco',
-        nome: 'IOS COLLAGEN LIFE – COLÁGENO HIDROLISADO EM PÓ RACCO 200g',
-        descricao: 'Peptídeos de colágeno que melhoram firmeza e elasticidade da pele.',
-        preco: 145.90, // Preço correto
-        imagem: 'imagens/racco/img4439.png'
-    },
-    {
-        id: 88,
-        marca: 'Racco',
-        nome: 'IOS MAXXI 30+ EM CÁPSULAS RACCO 30 cápsulas',
-        descricao: 'Minerais antioxidantes que estimulam colágeno e elastina.',
-        preco: 129.90, // Preço correto
-        imagem: 'imagens/racco/img4443.png'
-    },
-    {
-        id: 89,
-        marca: 'Racco',
-        nome: 'IOS COENZIMA Q10 - SUPLEMENTO ALIMENTAR EM CÁPSULAS RACCO 30 cápsulas',
-        descricao: 'Coenzima Q10 e vitamina E para energia celular e saúde cardiovascular.',
-        preco: 159.90, // Preço correto
-        imagem: 'imagens/racco/img4420.png'
-    },
-    {
-        id: 90,
-        marca: 'Racco',
-        nome: 'IOS ÔMEGA 3 EM CÁPSULAS RACCO 30 cápsulas',
-        descricao: 'Fonte de EPA e DHA para saúde cardiovascular e anti-inflamatória.',
-        preco: 129.90, // Preço correto
-        imagem: 'imagens/racco/img4447.png'
-    },
-    {
-        id: 91,
-        marca: 'Racco',
-        nome: 'IOS ALOE LIFE - SUPLEMENTO DE VITAMINA C SABOR ALOE VERA E LARANJA RACCO 1l',
-        descricao: 'Suplemento de vitamina C com sabor refrescante para imunidade.',
-        preco: 129.90, // Preço correto
-        imagem: 'imagens/racco/img4435.png'
-    },
-    {
-        id: 92,
-        marca: 'Racco',
-        nome: 'IOS ALOE LIFE – SUPLEMENTO PRONTO PARA BEBER COM VITAMINA C E SABOR ALOE VERA RACCO 1l',
-        descricao: 'Pronto para beber, reforça imunidade com sabor aloe vera.',
-        preco: 129.90, // Preço correto
-        imagem: 'imagens/racco/img4436.png'
-    },
-    {
-        id: 93,
-        marca: 'Racco',
-        nome: 'FIBRA LIFE REFRESH - PÓ PARA BEBIDA COM FIBRA PREBIÓTICA - CHÁ VERDE SABOR LIMÃO RACCO 200g',
-        descricao: 'Com chá verde e mate, equilibra flora intestinal e ajuda no controle de peso.',
-        preco: 69.90, // Preço atualizado
-        imagem: 'imagens/racco/img4767.png'
+    {
+        id: 536,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Escuro Acinzentado, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1972_coloraction-6106669af0b4dae62817449090557802-1024-1024.webp"
+    },
+    {
+        id: 537,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Escuro Vermelho Intenso, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1973_coloraction-7efc8a3fceba14b71317449089298894-1024-1024.webp"
+    },
+    {
+        id: 538,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Escuro Marrom, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1974_coloraction-8338a8cc82f94dcd5c17449088118060-1024-1024.webp"
+    },
+    {
+        id: 539,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Médio, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1975_coloraction-d8ae8d25beb5b8bac417449086843813-1024-1024.webp"
+    },
+    {
+        id: 540,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Médio Acinzentado, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1976_coloraction-a58f38886580a843f217449085643435-1024-1024.webp"
+    },
+    {
+        id: 541,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Médio Marrom, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1979_coloraction-d0d45834a7744da55717449083283525-1024-1024.webp"
+    },
+    {
+        id: 542,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Claro Acinzentado, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1982_coloraction-91613b53742d8cb49117449080511569-1024-1024.webp"
+    },
+    {
+        id: 543,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Muito Claro Acinzentado, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1983_coloraction-98f1bf46832141376317449022209295-1024-1024.webp"
+    },
+    {
+        id: 544,
+        marca: "Racco",
+        nome: "Coloração Creme Color.Action Racco - Louro Muito Claro Pérola, 60g",
+        descricao: "Coloração em creme com micropigmentos que garantem cor intensa, duradoura e hidratação aos fios.",
+        preco: 37.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/1984_coloraction-04d771071e10c6303817449018495811-1024-1024.webp"
+    },
+    {
+        id: 545,
+        marca: "Racco",
+        nome: "Caixa de Presente - Preta Racco",
+        descricao: "Caixa de presente sofisticada e elegante, ideal para montar kits e presentear com os produtos Racco.",
+        preco: 19.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/0013-f999976ae39b275d0d17374834125281-1024-1024.webp"
+    },
+    {
+        id: 546,
+        marca: "Racco",
+        nome: "Caixa de presente - Rose Racco",
+        descricao: "Caixa de presente sofisticada e elegante, ideal para montar kits e presentear com os produtos Racco.",
+        preco: 19.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/0012-aedd697a056e93cd8717374833115421-1024-1024.webp"
+    },
+    {
+        id: 547,
+        marca: "Racco",
+        nome: "Batom Lutti Colors Racco - Rosa, 3,5g",
+        descricao: "Batom com cor rosa vibrante, hidratação e acabamento cremoso para os lábios.",
+        preco: 24.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/30-21_batom-lutti-rosa-71bbd3d7fe6ac1266b17387558593620-1024-1024.webp"
+    },
+    {
+        id: 548,
+        marca: "Racco",
+        nome: "Hidratante Corporal Algodão Mais Pura Racco, 250g",
+        descricao: "Hidratante de hidratação profunda e prolongada que deixa a pele macia e aveludada como o Algodão.",
+        preco: 49.9,
+        imagem: "//acdn-us.mitiendanube.com/stores/002/001/491/products/hidratante-corporal-algodao-mais-pura-racco-250g-43b96ca1d25a6e18e417387559889788-1024-1024.webp"
     },
     {
         id: 94,
