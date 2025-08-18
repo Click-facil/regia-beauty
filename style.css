@@ -504,6 +504,8 @@ header {
 @media (max-width: 480px) {
     .catalogo-produtos {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        
     }
 }
 
@@ -530,30 +532,7 @@ header {
   }
 }
 
-/* ================================
-   GRID: 4 / 3 / 3 COLUNAS (DESK/TAB/CEL)
-   ================================ */
 
-/* Desktop: 4 colunas */
-.catalogo-produtos {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-/* Tablets e celulares grandes: 3 colunas */
-@media (max-width: 768px) {
-  .catalogo-produtos {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-/* Celulares pequenos: 3 colunas (mantém “pelo menos 3”) */
-@media (max-width: 480px) {
-  .catalogo-produtos {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
 
 /* Evita overflow dentro dos cards que poderia quebrar o grid */
 .catalogo-produtos > * { min-width: 0; }
