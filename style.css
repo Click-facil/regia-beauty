@@ -501,26 +501,6 @@ header {
     }
 }
 
-/* --- NOVO: Grid com 3–4 produtos por linha --- */
-.catalogo-produtos {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-@media (max-width: 768px) {
-    .catalogo-produtos {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .catalogo-produtos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        
-    }
-}
-
 /* ================================
    FORÇAR PALETA LIGHT NO MODO ESCURO
    ================================ */
