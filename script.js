@@ -2304,7 +2304,8 @@ document.addEventListener('DOMContentLoaded', () => {
         nome: "Água Perfumada Melancia 100ml",
         descricao: "Água perfumada com a fragrância suculenta e refrescante de melancia. Perfuma e hidrata a pele.",
         preco: 54.99,
-        imagem: "imagens
+        imagem: "imagens/odorata/agua.png"
+    },
     {
         id: 412,
         marca: "Odorata",
