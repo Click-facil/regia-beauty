@@ -62,14 +62,25 @@ header p {
     height: 40px;
     width: auto;
     background-color: #fdfaf9;
-    border: 1px dashed #e8d1d1;
 }
 
 /* Catálogo de Produtos */
 .catalogo-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .catalogo-produtos {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo-produtos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 .produto {
