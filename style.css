@@ -111,18 +111,13 @@ header p {
     margin-bottom: 5px;
     font-weight: 700;
 }
-
+/* stylelint-disable property-no-unknown */
 .produto .descricao {
     font-size: 0.78em;
     color: #666;
     flex-grow: 1; 
     margin-bottom: 10px;
     line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* stylelint-disable-line property-no-unknown */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .produto .preco {
@@ -377,6 +372,38 @@ footer {
 .btn-finalizar-modal .fab {
     margin-right: 10px;
 }
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza no meio */
+    gap: 15px; /* espaço entre logo e texto */
+    flex-wrap: wrap; /* evita quebrar no mobile */
+}
+
+.header-logo .logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fdfaf9; /* Fundo igual ao do body para integrar a imagem */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NOVO ESTILO PARA O BANNER */
+.header-banner {
+    max-width: 100%;
+    width: 900px; /* Define uma largura máxima para o banner */
+    height: auto;
+    border-radius: 12px; /* Suaviza as bordas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Cria o efeito de profundidade */
+}
+
 
 /* --- Responsividade --- */
 @media (max-width: 768px) {

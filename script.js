@@ -2508,7 +2508,7 @@ document.addEventListener('DOMContentLoaded', () => {
         produtos.forEach(produto => {
             const produtoHtml = `
                 <div class="produto" data-id="${produto.id}">
-                    <img src="${produto.imagem}" alt="${produto.nome}" onerror="this.onerror=null;this.src='https.placehold.co/300x300/f0f0f0/ccc?text=Imagem+Indisponível';">
+                    <img loading="lazy" src="${produto.imagem}" alt="${produto.nome}" onerror="this.onerror=null;this.src='https.placehold.co/300x300/f0f0f0/ccc?text=Imagem+Indisponível';">
                     <p class="marca">${produto.marca}</p>
                     <h3>${produto.nome}</h3>
                     <p class="descricao">${produto.descricao}</p>
