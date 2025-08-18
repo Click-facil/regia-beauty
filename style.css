@@ -468,3 +468,43 @@ footer {
         font-size: 0.9em;
     }
 }
+
+/* --- Forçar paleta no modo escuro --- */
+@media (prefers-color-scheme: dark) {
+    body, header, footer, .produto, .modal-content {
+        background-color: #fdfaf9 !important; /* Off-White */
+        color: #333 !important;
+    }
+    header h1, .secao-marca h2, .produto .preco {
+        color: #6d2e46 !important; /* Vinho */
+    }
+    .produto button, #sacola-icone {
+        background-color: #c5a47e !important; /* Dourado */
+        color: white !important;
+    }
+    #contador-sacola {
+        background-color: #6d2e46 !important; /* Vinho */
+        color: white !important;
+    }
+}
+
+/* --- Ajuste do Grid para exibir 3–4 produtos por linha --- */
+.catalogo-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* antes 200px */
+    gap: 20px; /* mais respiro entre os cards */
+}
+
+/* Em telas médias (tablets) ainda mantém 3 */
+@media (max-width: 768px) {
+    .catalogo-produtos {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+/* Em celulares pequenos, força pelo menos 2 */
+@media (max-width: 480px) {
+    .catalogo-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
