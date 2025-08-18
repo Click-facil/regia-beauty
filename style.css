@@ -397,12 +397,24 @@ header {
 
 /* NOVO ESTILO PARA O BANNER */
 .header-banner {
-    max-width: 300px;
-    width: 90%; /* Define uma largura máxima para o banner */
+    max-width: 100%;
+    width: 900px; /* Define uma largura grande para o PC */
     height: auto;
-    border-radius: 12px; /* Suaviza as bordas */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Cria o efeito de profundidade */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    /* ... (outras regras responsivas que você já tem) ... */
+
+    /* Adicione esta nova regra para o banner em ecrãs menores */
+    .header-banner {
+        width: 95%; /* Faz a imagem ocupar quase toda a largura do ecrã */
+        max-width: 500px; /* Define um limite para não ficar gigante em tablets */
+    }
+}
+
 
 
 /* --- Responsividade --- */
