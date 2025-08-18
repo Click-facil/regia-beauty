@@ -397,8 +397,8 @@ header {
 
 /* NOVO ESTILO PARA O BANNER */
 .header-banner {
-    max-width: 100%;
-    width: 900px; /* Define uma largura máxima para o banner */
+    max-width: 300px;
+    width: 90%; /* Define uma largura máxima para o banner */
     height: auto;
     border-radius: 12px; /* Suaviza as bordas */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Cria o efeito de profundidade */
