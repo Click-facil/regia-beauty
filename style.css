@@ -61,7 +61,6 @@ header p {
 .secao-marca h2 img {
     height: 40px;
     width: auto;
-    /* Adicionado para ajudar a visualizar o espaço da imagem caso ela não carregue */
     background-color: #fdfaf9;
     border: 1px dashed #e8d1d1;
 }
@@ -69,15 +68,14 @@ header p {
 /* Catálogo de Produtos */
 .catalogo-produtos {
     display: grid;
-    /* Ajustado para um grid mais compacto em todas as telas */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
 }
 
 .produto {
     background-color: white;
-    border-radius: 8px; /* Borda mais sutil */
-    padding: 10px; /* Padding reduzido para cards menores */
+    border-radius: 8px;
+    padding: 10px;
     text-align: left;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     display: flex;
@@ -92,7 +90,7 @@ header p {
 
 .produto img {
     max-width: 100%;
-    height: 140px; /* Altura da imagem reduzida */
+    height: 140px;
     object-fit: contain; 
     border-radius: 8px;
     margin-bottom: 10px;
@@ -100,15 +98,14 @@ header p {
 }
 
 .produto h3 {
-    font-size: 0.9em; /* Fonte do título ajustada */
+    font-size: 0.9em;
     margin: 5px 0;
     color: #333;
-    /* Garante alinhamento mesmo com títulos de 1 ou 2 linhas */
     line-height: 1.2;
-    min-height: 2.4em; /* 1.2em * 2 linhas */
+    min-height: 2.4em;
 }
 .produto .marca {
-    font-size: 0.7em; /* Fonte da marca ajustada */
+    font-size: 0.7em;
     color: #888;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -116,12 +113,11 @@ header p {
 }
 
 .produto .descricao {
-    font-size: 0.78em; /* Fonte sutilmente ajustada para melhor encaixe */
+    font-size: 0.78em;
     color: #666;
     flex-grow: 1; 
     margin-bottom: 10px;
     line-height: 1.4;
-    /* Aumentado para 4 linhas para exibir mais texto */
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -130,7 +126,7 @@ header p {
 }
 
 .produto .preco {
-    font-size: 1.1em; /* Fonte do preço ajustada */
+    font-size: 1.1em;
     font-weight: bold;
     color: #6d2e46;
 }
@@ -139,10 +135,10 @@ header p {
     background-color: #c5a47e;
     color: white;
     border: none;
-    padding: 8px 12px; /* Botão menor */
+    padding: 8px 12px;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px; /* Margem ajustada */
+    margin-top: 10px;
     transition: background-color 0.3s;
     font-weight: 700;
     font-size: 0.8em;
@@ -168,7 +164,6 @@ footer {
     align-items: center;
 }
 
-
 #finalizar-pedido {
     background-color: #25D366;
     color: white;
@@ -180,7 +175,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
     font-weight: 700;
-    max-width: 100%; /* Garante que o botão não ultrapasse a largura do rodapé */
+    max-width: 100%;
 }
 
 #finalizar-pedido:hover {
@@ -384,17 +379,11 @@ footer {
 }
 
 /* --- Responsividade --- */
-
-/* Para tablets e celulares maiores (telas até 768px) */
 @media (max-width: 768px) {
-    /* Ajustes gerais de corpo e fonte */
     body {
-        /* Melhora a legibilidade em telas menores */
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%;
     }
-
-    /* Cabeçalho */
     header {
         padding: 30px 20px;
     }
@@ -404,11 +393,9 @@ footer {
     header p {
         font-size: 1em;
     }
-
-    /* Títulos das Seções */
     .secao-marca {
         margin-top: 30px;
-        padding: 0 15px; /* Menos padding lateral */
+        padding: 0 15px;
     }
     .secao-marca h2 {
         font-size: 1.8em;
@@ -416,8 +403,6 @@ footer {
     .secao-marca h2 img {
         height: 35px;
     }
-
-    /* Modal */
     .modal-content {
         width: 95%;
         max-height: 85vh;
@@ -425,18 +410,13 @@ footer {
     }
 }
 
-/* Para celulares menores (telas até 480px) */
 @media (max-width: 480px) {
     body {
-        padding-bottom: 85px; /* Mais espaço para o rodapé */
+        padding-bottom: 85px;
     }
-
-    /* Cabeçalho */
     header h1 {
         font-size: 1.7em;
     }
-
-    /* Títulos das Seções */
     .secao-marca h2 {
         font-size: 1.4em;
         gap: 10px;
@@ -444,14 +424,10 @@ footer {
     .secao-marca h2 img {
         height: 28px;
     }
-
-    /* Rodapé */
     #finalizar-pedido {
         padding: 12px 20px;
         font-size: 1em;
     }
-
-    /* Ícone da Sacola */
     #sacola-icone {
         width: 45px;
         height: 45px;
@@ -459,8 +435,6 @@ footer {
         top: 15px;
         right: 15px;
     }
-
-    /* Modal da Sacola */
     .modal-content h2 {
         font-size: 1.5em;
     }
@@ -469,40 +443,37 @@ footer {
     }
 }
 
-/* --- Forçar paleta no modo escuro --- */
+/* --- NOVO: Forçar paleta no modo escuro --- */
 @media (prefers-color-scheme: dark) {
     body, header, footer, .produto, .modal-content {
-        background-color: #fdfaf9 !important; /* Off-White */
+        background-color: #fdfaf9 !important;
         color: #333 !important;
     }
     header h1, .secao-marca h2, .produto .preco {
-        color: #6d2e46 !important; /* Vinho */
+        color: #6d2e46 !important;
     }
     .produto button, #sacola-icone {
-        background-color: #c5a47e !important; /* Dourado */
+        background-color: #c5a47e !important;
         color: white !important;
     }
     #contador-sacola {
-        background-color: #6d2e46 !important; /* Vinho */
+        background-color: #6d2e46 !important;
         color: white !important;
     }
 }
 
-/* --- Ajuste do Grid para exibir 3–4 produtos por linha --- */
+/* --- NOVO: Grid com 3–4 produtos por linha --- */
 .catalogo-produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* antes 200px */
-    gap: 20px; /* mais respiro entre os cards */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-/* Em telas médias (tablets) ainda mantém 3 */
 @media (max-width: 768px) {
     .catalogo-produtos {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 }
 
-/* Em celulares pequenos, força pelo menos 2 */
 @media (max-width: 480px) {
     .catalogo-produtos {
         grid-template-columns: repeat(2, 1fr);
