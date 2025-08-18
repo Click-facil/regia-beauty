@@ -2192,7 +2192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nome: "Zenit Acqua Deo Colônia Refrescante Masculina 100 ml",
         descricao: "Colônia masculina refrescante com notas aquáticas, perfeita para o uso diário e dias quentes.",
         preco: 59.99,
-        imagem: "https://odorata.com.br/wp-content/uploads/2022/01/Zenit-Acqua-Deo-Colonia.png"
+        imagem: "imagens/odorata/zenit.png"
     },
     {
         id: 389,
