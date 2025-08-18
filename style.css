@@ -119,7 +119,7 @@ header p {
     margin-bottom: 10px;
     line-height: 1.4;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 4; /* stylelint-disable-line property-no-unknown */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -154,7 +154,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #e8d1d1; 
+    background-color: #b3916c; 
     padding: 15px 20px;
     border-top: 1px solid #d1baba; 
     z-index: 100;
@@ -479,3 +479,54 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* ================================
+   FORÇAR PALETA LIGHT NO MODO ESCURO
+   ================================ */
+:root { color-scheme: light; } /* Sugere ao navegador usar UI clara */
+
+@media (prefers-color-scheme: dark) {
+  body, header, footer, .produto, .modal-content {
+    background-color: #fdfaf9 !important;
+    color: #333 !important;
+  }
+  header h1, .secao-marca h2, .produto .preco {
+    color: #6d2e46 !important;
+  }
+  .produto button, #sacola-icone {
+    background-color: #c5a47e !important;
+    color: #fff !important;
+  }
+  #contador-sacola {
+    background-color: #6d2e46 !important;
+    color: #fff !important;
+  }
+}
+
+/* ================================
+   GRID: 4 / 3 / 3 COLUNAS (DESK/TAB/CEL)
+   ================================ */
+
+/* Desktop: 4 colunas */
+.catalogo-produtos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Tablets e celulares grandes: 3 colunas */
+@media (max-width: 768px) {
+  .catalogo-produtos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Celulares pequenos: 3 colunas (mantém “pelo menos 3”) */
+@media (max-width: 480px) {
+  .catalogo-produtos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Evita overflow dentro dos cards que poderia quebrar o grid */
+.catalogo-produtos > * { min-width: 0; }
