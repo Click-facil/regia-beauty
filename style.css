@@ -495,9 +495,17 @@ header {
 
 /* --- NOVO: Forçar paleta no modo escuro --- */
 @media (prefers-color-scheme: dark) {
-    body, header, footer, .produto, .modal-content {
+    body, header, footer, .modal-content { /* <-- Removemos o ".produto" daqui */
         background-color: #fdfaf9 !important;
         color: #333 !important;
+    }
+    
+    .produto { /* <-- Criamos uma regra separada para o card */
+        background-color: white !important;
+    }
+
+    /* ... o resto das regras ... */
+
     }
     header h1, .secao-marca h2, .produto .preco {
         color: #6d2e46 !important;
@@ -510,7 +518,7 @@ header {
         background-color: #6d2e46 !important;
         color: white !important;
     }
-}
+
 
 /* ================================
    FORÇAR PALETA LIGHT NO MODO ESCURO
