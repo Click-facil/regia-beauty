@@ -60,7 +60,8 @@ header p {
 
 .secao-marca h2 img {
     height: 40px;
-    width: auto;
+    width: 140px; /* Define uma largura fixa para os logos */
+    object-fit: contain; /* Garante que a imagem não seja distorcida */
     background-color: #fdfaf9;
 }
 
