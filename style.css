@@ -393,8 +393,8 @@ footer {
 }
 
 .header-logo .logo {
-    max-width: 100px;
-    height: auto;
+    max-width: 100px; /* aumenta a largura da logo */
+    height: auto; 
 }
 
 /* Cabeçalho */
@@ -406,27 +406,75 @@ header {
     align-items: center;
 }
 
-/* NOVO ESTILO PARA O BANNER */
-.header-banner {
-    max-width: 100%;
-    width: 900px; /* Define uma largura grande para o PC */
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+/* === Novo Cabeçalho Estilo Split === */
+.header-novo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    background-color: #fdfaf9; /* Fundo claro */
+    border-bottom: 2px solid #e8d1d1;
+    flex-wrap: wrap; /* Ajusta no mobile */
 }
 
-/* --- Responsividade --- */
-@media (max-width: 768px) {
-    /* ... (outras regras responsivas que você já tem) ... */
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 50%;
+    margin-left: 60px; /* ou ajuste conforme o alinhamento desejado */
+    gap: -45px; /* diminui a distância entre logo e texto */
+}
 
-    /* Adicione esta nova regra para o banner em ecrãs menores */
-    .header-banner {
-        width: 95%; /* Faz a imagem ocupar quase toda a largura do ecrã */
-        max-width: 500px; /* Define um limite para não ficar gigante em tablets */
+.logo-header {
+    max-width: 400px; /* mantém grande */
+    height: auto;
+    margin-bottom: 5px; /* espaço mínimo entre logo e texto */
+}
+
+.header-left h1 {
+    font-size: 2.5em;
+    color: #6d2e46;
+    margin: -55px 0 0 20px; /* remove espaço extra */
+    padding: 0;
+    border: none;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-header {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .header-novo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-left {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .header-left h1 {
+        font-size: 1.8em;
+    }
+
+    .img-header {
+        max-width: 80%;
+        margin-top: 20px;
     }
 }
-
-
 
 /* --- Responsividade --- */
 @media (max-width: 768px) {
