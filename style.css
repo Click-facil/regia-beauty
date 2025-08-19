@@ -64,11 +64,39 @@ header p {
     background-color: #fdfaf9;
 }
 
+/* Estilos para seções recolhíveis */
+.titulo-recolhivel {
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Padrão */
+}
+
+.titulo-recolhivel::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    font-size: 0.6em;
+    transition: transform 0.3s ease;
+}
+
+.titulo-recolhivel.ativo::after {
+    transform: rotate(180deg);
+}
+
 /* Catálogo de Produtos */
 .catalogo-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    overflow: hidden;
+    max-height: 5000px; /* Valor alto para garantir que todo o conteúdo seja visível quando expandido */
+    transition: max-height 0.7s ease-in-out;
+}
+
+.catalogo-produtos.recolhido {
+    max-height: 0;
 }
 @media (max-width: 768px) {
     .catalogo-produtos {
@@ -82,7 +110,6 @@ header p {
         gap: 15px;
     }
 }
-
 .produto {
     background-color: white;
     border-radius: 8px;
@@ -423,7 +450,6 @@ header {
     align-items: flex-start;
     max-width: 50%;
     margin-left: 60px; /* ou ajuste conforme o alinhamento desejado */
-    gap: -45px; /* diminui a distância entre logo e texto */
 }
 
 .logo-header {
@@ -435,7 +461,8 @@ header {
 .header-left h1 {
     font-size: 2.5em;
     color: #6d2e46;
-    margin: -55px 0 0 20px; /* remove espaço extra */
+    /* Puxa o texto para cima, sobrepondo a logo. Ajuste o valor (-105px) para mais ou menos perto. */
+    margin: -105px 0 0 20px; 
     padding: 0;
     border: none;
     font-family: 'Lora', serif;
@@ -459,20 +486,29 @@ header {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 20px; /* Adiciona espaço entre os elementos do cabeçalho */
+        padding: 20px 15px; /* Ajusta o padding para telas menores */
     }
 
     .header-left {
         max-width: 100%;
         align-items: center;
+        margin-left: 0; /* Centraliza o container da logo/título */
+        gap: 15px; /* Adiciona um espaço entre a logo e o título */
     }
 
     .header-left h1 {
         font-size: 1.8em;
+        margin: 0; /* Remove margens negativas para evitar sobreposição */
+    }
+
+    .logo-header {
+        max-width: 280px; /* Ajusta o tamanho da logo para mobile */
     }
 
     .img-header {
         max-width: 80%;
-        margin-top: 20px;
+        margin-top: 0; /* O gap no .header-novo já cria o espaçamento */
     }
 }
 

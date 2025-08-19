@@ -957,14 +957,6 @@ document.addEventListener('DOMContentLoaded', () => {
         imagem: "https://tfddmr.vtexassets.com/arquivos/ids/159267-300-300"
     },
     {
-        id: 96,
-        marca: "Abelha Rainha",
-        nome: "Amostra Ar Maquiagem Fps 15 Batom Lipchick 3 Em 1 Coral 0,9 G",
-        descricao: "Amostra do batom Lipchick 3 em 1. Ideal para experimentar a cor Coral vibrante com proteção solar.",
-        preco: 0.75,
-        imagem: "https://tfddmr.vtexassets.com/arquivos/ids/159399-300-300"
-    },
-    {
         id: 97,
         marca: "Abelha Rainha",
         nome: "Ar Maquiagem Fps 15 Batom Acido Hialuronico Nude Romantico 3,8 G",
@@ -2531,4 +2523,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- INICIALIZAÇÃO ---
     renderizarProdutos();
     atualizarTudo();
+
+    // --- LÓGICA PARA SEÇÕES RECOLHÍVEIS ---
+    const titulosRecolhiveis = document.querySelectorAll('.titulo-recolhivel');
+
+    titulosRecolhiveis.forEach(titulo => {
+        const catalogo = titulo.nextElementSibling;
+
+        // Garante que o catálogo correspondente exista e o inicia recolhido
+        if (catalogo && catalogo.classList.contains('catalogo-produtos')) {
+            catalogo.classList.add('recolhido');
+        }
+
+        // Adiciona o evento de clique para expandir/recolher
+        titulo.addEventListener('click', () => {
+            // Alterna a classe 'ativo' no título para girar a seta
+            titulo.classList.toggle('ativo');
+            // Alterna a classe 'recolhido' no catálogo para mostrar/esconder
+            catalogo.classList.toggle('recolhido');
+        });
+    });
 });
