@@ -91,14 +91,17 @@ header p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    overflow: hidden;
-    max-height: 5000px; /* Valor alto para garantir que todo o conteúdo seja visível quando expandido */
+    padding-bottom: 20px;
     transition: max-height 0.7s ease-in-out;
+    max-height: none;          /* deixa expandido por padrão */
+    overflow: visible;         /* permite que o grid cresça sem cortar os itens */
 }
 
 .catalogo-produtos.recolhido {
-    max-height: 0;
+    max-height: 0;             /* encolhe apenas no estado recolhido */
+    overflow: hidden;          /* esconde os itens quando recolhido */
 }
+
 @media (max-width: 768px) {
     .catalogo-produtos {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
