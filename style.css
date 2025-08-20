@@ -44,6 +44,7 @@ header p {
     max-width: 1200px;
     margin: 40px auto 0 auto;
     padding: 0 20px;
+    overflow: hidden;
 }
 
 .secao-marca h2 {
