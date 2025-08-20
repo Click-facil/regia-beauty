@@ -101,6 +101,10 @@ header p {
 .catalogo-produtos.recolhido {
     max-height: 0;             /* encolhe apenas no estado recolhido */
     overflow: hidden;          /* esconde os itens quando recolhido */
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    border-width: 0;
 }
 
 @media (max-width: 768px) {
