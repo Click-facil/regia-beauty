@@ -2345,18 +2345,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Estado da Aplicação
     let sacola = []; // Armazena objetos com id e quantidade
 
+    // ... existing code ...
+
     // --- FUNÇÕES ---
 
-    function renderizarProdutos() {
+    // Substituir a função existente por esta (suporta lista filtrada e controla visibilidade por marca)
+    function renderizarProdutos(lista = produtos) {
         // Limpa os catálogos antes de renderizar
         catalogoRaccoDiv.innerHTML = '';
         catalogoAbelhaRainhaDiv.innerHTML = '';
         catalogoOdorataDiv.innerHTML = '';
 
-        produtos.forEach(produto => {
+        // Normaliza: se lista não for passada, usa todos
+        const dados = Array.isArray(lista) ? lista : produtos;
+
+        // Renderiza
+        dados.forEach(produto => {
             const produtoHtml = `
                 <div class="produto" data-id="${produto.id}">
-                    <img loading="lazy" src="${produto.imagem}" alt="${produto.nome}" onerror="this.onerror=null;this.src='https.placehold.co/300x300/f0f0f0/ccc?text=Imagem+Indisponível';">
+                    <img loading="lazy" src="${produto.imagem}" alt="${produto.nome}" onerror="this.onerror=null;this.src='https://placehold.co/300x300/f0f0f0/ccc?text=Imagem+Indisponível';">
                     <p class="marca">${produto.marca}</p>
                     <h3>${produto.nome}</h3>
                     <p class="descricao">${produto.descricao}</p>
@@ -2365,7 +2372,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
-            // Adiciona o produto à sua respectiva seção de marca
             if (produto.marca === 'Racco') {
                 catalogoRaccoDiv.innerHTML += produtoHtml;
             } else if (produto.marca === 'Abelha Rainha') {
@@ -2374,7 +2380,135 @@ document.addEventListener('DOMContentLoaded', () => {
                 catalogoOdorataDiv.innerHTML += produtoHtml;
             }
         });
+
+        // Se nenhum item em nenhuma marca, mostra mensagem única
+        if (dados.length === 0) {
+            const msg = '<p class="sem-resultados">Nenhum produto encontrado.</p>';
+            catalogoRaccoDiv.innerHTML = msg;
+            catalogoAbelhaRainhaDiv.innerHTML = '';
+            catalogoOdorataDiv.innerHTML = '';
+        }
+
+        // Controla visibilidade de cada marca (oculta catálogos vazios)
+        const temRacco = dados.some(p => p.marca === 'Racco');
+        const temAR = dados.some(p => p.marca === 'Abelha Rainha');
+        const temOdorata = dados.some(p => p.marca === 'Odorata');
+
+        catalogoRaccoDiv.style.display = temRacco ? '' : 'none';
+        catalogoAbelhaRainhaDiv.style.display = temAR ? '' : 'none';
+        catalogoOdorataDiv.style.display = temOdorata ? '' : 'none';
     }
+
+// ... existing code ...
+
+// ... existing code ...
+
+    // Helpers de busca
+    function normalizarTexto(str) {
+        return (str || '')
+            .toString()
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function aplicarFiltroPesquisa(termo) {
+        const q = normalizarTexto((termo || '').trim());
+        if (!q) return produtos.slice();
+
+        return produtos.filter(p => {
+            const nome = normalizarTexto(p.nome);
+            const marca = normalizarTexto(p.marca);
+            const desc = normalizarTexto(p.descricao);
+            return nome.includes(q) || marca.includes(q) || desc.includes(q);
+        });
+    }
+
+    function debounce(fn, delay = 250) {
+        let t;
+        return (...args) => {
+            clearTimeout(t);
+            t = setTimeout(() => fn.apply(null, args), delay);
+        };
+    }
+
+    // Vincula a barra de pesquisa (tenta vários seletores; previne submit do form)
+    function bindBusca() {
+        // Tenta encontrar o input de busca por vários seletores comuns
+        const inputBusca =
+            document.querySelector('#barra-pesquisa') ||
+            document.querySelector('#search') ||
+            document.querySelector('#search-input') ||
+            document.querySelector('#busca') ||
+            document.querySelector('#campo-busca') ||
+            document.querySelector('input[type="search"]') ||
+            document.querySelector('input[name*="busca" i]') ||
+            document.querySelector('input[id*="busca" i]') ||
+            document.querySelector('input[name*="pesquisa" i]') ||
+            document.querySelector('input[id*="pesquisa" i]');
+
+        if (!inputBusca) {
+            console.warn('Barra de pesquisa não encontrada. Informe o seletor/ID do input para conectar a busca.');
+            return;
+        }
+
+        const executarBusca = debounce(() => {
+            const termo = inputBusca.value || '';
+            const filtrados = aplicarFiltroPesquisa(termo);
+
+            // Durante uma busca com termo, expande catálogos recolhidos
+            const termoAtivo = termo.trim().length > 0;
+            if (termoAtivo) {
+                // Remove classe "recolhido" dos catálogos se existir
+                [catalogoRaccoDiv, catalogoAbelhaRainhaDiv, catalogoOdorataDiv].forEach(cat => {
+                    if (cat && cat.classList && cat.classList.contains('recolhido')) {
+                        cat.classList.remove('recolhido');
+                    }
+                    // Também tente expandir o contêiner pai com classe catalogo-produtos se houver
+                    const container = cat?.closest('.catalogo-produtos');
+                    if (container && container.classList.contains('recolhido')) {
+                        container.classList.remove('recolhido');
+                    }
+                    // Se houver um título associado antes, marca como ativo para girar seta
+                    const titulo = container ? container.previousElementSibling : cat?.previousElementSibling;
+                    if (titulo && titulo.classList && titulo.classList.contains('titulo-recolhivel')) {
+                        titulo.classList.add('ativo');
+                    }
+                });
+            }
+
+            renderizarProdutos(termoAtivo ? filtrados : produtos);
+        }, 200);
+
+        // Previne submit do formulário envolvendo a busca
+        if (inputBusca.form) {
+            inputBusca.form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                executarBusca();
+            });
+        }
+
+        // Se existir botão de busca separado
+        const botaoBusca =
+            (inputBusca.form && inputBusca.form.querySelector('[type="submit"], .btn-busca, #btn-busca')) ||
+            document.querySelector('.btn-busca, #btn-busca');
+
+        if (botaoBusca) {
+            botaoBusca.addEventListener('click', (e) => {
+                e.preventDefault();
+                executarBusca();
+            });
+        }
+
+        // Atualiza enquanto digita
+        inputBusca.addEventListener('input', executarBusca);
+        inputBusca.addEventListener('change', executarBusca);
+
+        // Log de diagnóstico
+        console.debug('Busca conectada ao seletor:', inputBusca);
+    }
+
+// ... existing code ...
 
     function adicionarASacola(produtoId) {
         const itemExistente = sacola.find(item => item.id === produtoId);
@@ -2519,10 +2653,41 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleModal();
         }
     });
-    
-    // --- INICIALIZAÇÃO ---
-    renderizarProdutos();
-    atualizarTudo();
+
+  // ... existing code ...
+
+   // ... existing code ...
+
+   // --- INICIALIZAÇÃO --- 
+   renderizarProdutos();
+   atualizarTudo();
+
+   // Conectar barra de pesquisa (depois de renderizar e atualizar)
+   bindBusca();
+
+// ... existing code ...
+
+   // Conectar barra de pesquisa (adicione logo após a inicialização acima)
+   const inputBusca = document.querySelector(
+       '#barra-pesquisa, #search, #search-input, input[type="search"], #busca, #campo-busca, .buscar input, .pesquisa input'
+   );
+
+   if (inputBusca) {
+       const executarBusca = debounce(() => {
+           const termo = inputBusca.value || '';
+           if (!termo.trim()) {
+               renderizarProdutos(); // sem termo => mostra tudo
+               return;
+           }
+           const filtrados = aplicarFiltroPesquisa(termo);
+           renderizarProdutos(filtrados);
+       }, 200);
+
+       inputBusca.addEventListener('input', executarBusca);
+       inputBusca.addEventListener('change', executarBusca);
+   }
+
+// ... existing code ...
 
     // --- LÓGICA PARA SEÇÕES RECOLHÍVEIS ---
     const titulosRecolhiveis = document.querySelectorAll('.titulo-recolhivel');
