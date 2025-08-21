@@ -28,10 +28,18 @@
 
 
 
-    <main>
-        <section id="filtros">
-            <!-- Filtros podem ser adicionados aqui no futuro, como uma barra de busca -->
+   <main>
+        <!-- ===== NOVA SEÇÃO DE PESQUISA ===== -->
+        <section class="secao-pesquisa">
+            <form action="#" id="form-pesquisa">
+                <input type="search" id="input-pesquisa" placeholder="Buscar por produto ou marca...">
+                <button type="submit" aria-label="Pesquisar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
         </section>
+        <!-- =================================== -->
+
 
         <section id="secao-racco" class="secao-marca">
             <h2 class="titulo-recolhivel">
@@ -53,6 +61,17 @@
             </div>
         </section>
 
+    </main>
+
+    <footer>
+        <button id="finalizar-pedido">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Finalizar Pedido (<span id="total-sacola">R$ 0,00</span>)
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
         <section id="secao-odorata" class="secao-marca">
             <h2 class="titulo-recolhivel">
                 <img src="imagens/odorata/logoodorata.png" alt="Logo Odorata">
@@ -62,14 +81,6 @@
                 <!-- Produtos Odorata serão inseridos aqui via JavaScript -->
             </div>
         </section>
-    </main>
-
-    <footer>
-        <button id="finalizar-pedido">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i> Finalizar Pedido (<span id="total-sacola">R$ 0,00</span>)
-        </button>
-    </footer>
-
     <button id="sacola-icone" aria-label="Abrir sacola de compras">
         <i class="fas fa-shopping-bag" aria-hidden="true"></i>
         <span id="contador-sacola">0</span>
@@ -97,6 +108,3 @@
 
 
     <!-- Link para o arquivo JavaScript -->
-    <script src="script.js"></script>
-</body>
-</html>
