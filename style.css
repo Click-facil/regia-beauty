@@ -189,6 +189,12 @@ header p {
     background-color: #f9f9f9;
 }
 
+#secao-abelha-rainha .produto img,
+#secao-odorata .produto img {
+  background: transparent;
+  mix-blend-mode: multiply;
+}
+
 .produto h3 {
     font-size: 0.9em;
     margin: 5px 0;
@@ -565,6 +571,24 @@ header {
         margin-top: 0; /* O gap no .header-novo já cria o espaçamento */
     }
 }
+
+/* Rodapé Institucional */
+.footer-institucional {
+    background-color: #fdfaf9; /* Off-White */
+    color: #6d2e46; /* Vinho */
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+  
+}
+
+.footer-institucional .creditos {
+    font-size: 0.8em;
+    color: #333; /* Texto neutro */
+    margin-top: 5px;
+}
+
 
 /* --- Responsividade --- */
 @media (max-width: 768px) {
