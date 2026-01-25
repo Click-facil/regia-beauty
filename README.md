@@ -37,7 +37,7 @@
  
  1.  **Clone o repositório** (ou baixe os arquivos):
      ```bash
-     git clone <URL_DO_SEU_REPOSITORIO>
+     git clone <https://github.com/Click-facil/regia-beauty.git>
      ```
  2.  **Navegue até a pasta do projeto**:
      ```bash

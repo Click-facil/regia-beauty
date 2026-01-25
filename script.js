@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sacolaItensDiv = document.getElementById('sacola-itens');
     const sacolaTotalValorSpan = document.getElementById('sacola-total-valor');
     const finalizarPedidoModalButton = document.getElementById('finalizar-pedido-modal');
+    const footerElement = document.querySelector('footer'); // Referência ao elemento footer
 
     // Configuração
     const seuNumeroWhatsApp = '5591981803393';
@@ -2615,6 +2616,20 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(linkWhatsApp, '_blank');
     }
 
+    // Função para controlar a visibilidade do footer na rolagem
+    function handleScroll() {
+        // Define um limite de rolagem para mostrar o footer.
+        // Usamos a altura do hero (header-novo) como referência.
+        const heroHeight = document.querySelector('.header-novo').offsetHeight;
+        const scrollThreshold = heroHeight * 0.5; // Mostra o footer após rolar 50% do hero
+
+        if (window.scrollY > scrollThreshold) {
+            footerElement.classList.add('is-visible');
+        } else {
+            footerElement.classList.remove('is-visible');
+        }
+    }
+
     // --- EVENT LISTENERS ---
 
     document.querySelector('main').addEventListener('click', (event) => {
@@ -2653,6 +2668,9 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleModal();
         }
     });
+
+    // Adiciona o event listener para a rolagem
+    window.addEventListener('scroll', handleScroll);
 
   // ... existing code ...
 

@@ -493,84 +493,6 @@ header {
     align-items: center;
 }
 
-/* === Novo Cabeçalho Estilo Split === */
-.header-novo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 40px;
-    background-color: #fdfaf9; /* Fundo claro */
-    border-bottom: 2px solid #e8d1d1;
-    flex-wrap: wrap; /* Ajusta no mobile */
-}
-
-.header-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 50%;
-    margin-left: 60px; /* ou ajuste conforme o alinhamento desejado */
-}
-
-.logo-header {
-    max-width: 400px; /* mantém grande */
-    height: auto;
-    margin-bottom: 5px; /* espaço mínimo entre logo e texto */
-}
-
-.header-left h1 {
-    font-size: 2.5em;
-    color: #6d2e46;
-    /* Puxa o texto para cima, sobrepondo a logo. Ajuste o valor (-105px) para mais ou menos perto. */
-    margin: -105px 0 0 20px; 
-    padding: 0;
-    border: none;
-    font-family: 'Lora', serif;
-    font-weight: bold;
-}
-
-.header-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.img-header {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-@media (max-width: 768px) {
-    .header-novo {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px; /* Adiciona espaço entre os elementos do cabeçalho */
-        padding: 20px 15px; /* Ajusta o padding para telas menores */
-    }
-
-    .header-left {
-        max-width: 100%;
-        align-items: center;
-        margin-left: 0; /* Centraliza o container da logo/título */
-        gap: 15px; /* Adiciona um espaço entre a logo e o título */
-    }
-
-    .header-left h1 {
-        font-size: 1.8em;
-        margin: 0; /* Remove margens negativas para evitar sobreposição */
-    }
-
-    .logo-header {
-        max-width: 280px; /* Ajusta o tamanho da logo para mobile */
-    }
-
-    .img-header {
-        max-width: 80%;
-        margin-top: 0; /* O gap no .header-novo já cria o espaçamento */
-    }
-}
 
 /* Rodapé Institucional */
 .footer-institucional {
@@ -718,3 +640,90 @@ header {
 
 /* Evita overflow dentro dos cards que poderia quebrar o grid */
 .catalogo-produtos > * { min-width: 0; }
+
+/* Container Principal */
+.header-novo {
+    padding: 0; /* O padding será aplicado ao header-content para controlar o espaçamento do conteúdo */
+    background-color: transparent; /* Garante que o fundo seja transparente para a imagem aparecer */
+    border-bottom: 2px solid #e8d1d1;
+    background-image: url('imagens/Régia_Beauty_Profissionalizado.png'); /* Define a imagem como fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço do cabeçalho */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    min-height: 800px; /* Aumenta a altura mínima para o hero, como solicitado */
+    position: relative; /* Permite posicionar elementos filhos absolutamente */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na altura/largura */
+}
+
+.header-content {
+    display: flex;
+    position: absolute; /* Posiciona o conteúdo sobre a imagem de fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na altura/largura */
+    padding: 30px 5%; /* Adiciona o respiro para o conteúdo dentro do hero */
+    /* As propriedades flexbox foram removidas pois o botão "Fale Conosco" foi removido. */
+    /* Se houver outro conteúdo no header-content no futuro, estas propriedades podem ser reavaliadas. */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* O LOGO - Aqui é onde a mágica acontece */
+.logo-header {
+    display: none !important; /* Oculta a tag <img> do logo, pois a imagem agora é o background do header */
+}
+
+/* Ajuste para Celular - Para não ficar tudo apertado */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-header {
+        max-width: 320px !important; /* Um pouco menor no celular para caber */
+    }
+}
+
+/* Rodapé com Botão de Finalizar - Visibilidade na rolagem */
+footer {
+    /* ... (manter estilos existentes para posicionamento e aparência) ... */
+    transform: translateY(100%); /* Esconde o footer para baixo por padrão */
+    transition: transform 0.3s ease-out, visibility 0.3s ease-out; /* Transição suave */
+    visibility: hidden; /* Garante que não seja interativo quando escondido */
+}
+
+footer.is-visible {
+    transform: translateY(0); /* Mostra o footer */
+    visibility: visible;
+}
+
+/* Ajustes de altura do hero para responsividade */
+@media (max-width: 1400px) { /* Ajustado para telas um pouco maiores também */
+    .header-novo {
+        min-height: 650px; /* Altura para telas de desktop menores */
+    }
+}
+
+@media (max-width: 992px) {
+    .header-novo {
+        min-height: 500px; /* Altura para tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-novo {
+        min-height: 550px; /* Aumenta a altura para celulares para a imagem não ficar espremida */
+    }
+    /* Usa a imagem específica para mobile */
+    .header-novo {
+        background-image: url('imagens/regia-mobile.png');
+        /* Mantém background-size: cover e background-position: center */
+        /* para garantir que a imagem se ajuste bem */
+    }
+    .header-content {
+        padding: 20px 3%; /* Ajusta o padding para telas menores */
+    }
+}
