@@ -662,19 +662,42 @@ footer.is-visible {
 
 @media (max-width: 768px) {
     .header-novo {
-        min-height: 550px; /* Aumenta a altura para celulares para a imagem não ficar espremida */
+        /* 1. Faz o banner ocupar toda a altura visível do telemóvel */
+        height: 100vh; 
+        height: 100dvh; /* Versão moderna que ignora as barras do navegador */
+        
+        /* 2. Garante a troca da imagem */
+        background-image: url('imagens/regia-mobile.png') !important;
+        
+        /* 3. 'cover' expande a imagem para preencher tudo. 
+           Para NÃO cortar embaixo, usamos 'top center' ou 'center center' */
+        background-size: cover;
+        background-position: center top; 
+        background-repeat: no-repeat;
+        
+        /* Limpa paddings que possam estar empurrando a imagem */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
-    /* Usa a imagem específica para mobile */
-    .header-novo {
-        background-image: url('imagens/regia-mobile.png');
-        /* Mantém background-size: cover e background-position: center */
-        /* para garantir que a imagem se ajuste bem */
-    }
+
     .header-content {
-        padding: 20px 3%; /* Ajusta o padding para telas menores */
+        /* Se o seu texto e logo estiverem dentro da imagem mobile, 
+           podemos ocultar os elementos HTML para não duplicar */
+        padding: 40px 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Ajuste para que a barra de pesquisa não fique escondida se a imagem for muito alta */
+    .secao-pesquisa {
+        margin-top: -50px; /* Faz a barra 'flutuar' sobre o final da imagem */
+        position: relative;
+        z-index: 5;
     }
 }
-
 /* --- ESTILO DAS SEÇÕES RECOLHÍVEIS (Régia Beauty) --- */
 
 .titulo-recolhivel {
@@ -729,7 +752,6 @@ footer.is-visible {
 @media (max-width: 768px) {
     /* 1. Ajuste do Hero no Celular */
     .header-novo {
-        background-image: url('imagens/Régia_Beauty_Profissionalizado.png') !important;
         min-height: 300px;
         background-position: center top;
     }
