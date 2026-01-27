@@ -723,3 +723,82 @@ footer.is-visible {
     margin: 0 !important;
     pointer-events: none;
 }
+
+/* --- RESPONSIVIDADE (CELULAR E TABLET) --- */
+/* Substitua TODO o bloco final do seu CSS por este */
+@media (max-width: 768px) {
+    /* 1. Ajuste do Hero no Celular */
+    .header-novo {
+        background-image: url('imagens/Régia_Beauty_Profissionalizado.png') !important;
+        min-height: 300px;
+        background-position: center top;
+    }
+
+    /* 2. CORREÇÃO DA BARRA DE PESQUISA */
+    .secao-pesquisa {
+        margin: 20px auto; /* Mais espaço acima e abaixo */
+        padding: 0 15px; /* Garante que não encoste na borda da tela */
+        max-width: 100%; /* Usa toda a largura disponível */
+    }
+
+    .secao-pesquisa form {
+        width: 100%; /* Força o formulário a ocupar o espaço */
+    }
+
+    .secao-pesquisa input {
+        padding: 10px 15px; /* Padding menor para caber melhor */
+        font-size: 0.9em; /* Fonte ligeiramente menor */
+        /* Evita que o iPhone dê zoom ao clicar no input */
+        font-size: 16px; 
+    }
+
+    .secao-pesquisa button {
+        padding: 0 20px; /* Botão um pouco mais compacto */
+    }
+
+    /* 3. FORÇAR 2 COLUNAS POR LINHA */
+    .catalogo-produtos {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    /* 4. Ajuste dos Cards */
+    .produto {
+        padding: 10px;
+    }
+
+    .produto img {
+        height: 120px;
+        margin-bottom: 8px;
+    }
+
+    .produto h3 {
+        font-size: 0.8em;
+        margin: 5px 0;
+        min-height: auto;
+    }
+
+    /* 5. DESCRIÇÃO VISÍVEL (Limitada a 3 linhas) */
+    .produto .descricao {
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Máximo de 3 linhas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 0.7em;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        color: #666;
+        height: auto; /* Garante que a altura se ajuste */
+    }
+
+    .produto .preco {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+
+    .produto button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
