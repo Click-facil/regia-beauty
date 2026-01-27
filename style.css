@@ -66,28 +66,6 @@ header p {
     background-color: #fdfaf9;
 }
 
-/* Estilos para seções recolhíveis */
-.titulo-recolhivel {
-    cursor: pointer;
-    position: relative;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10+ */
-    user-select: none; /* Padrão */
-}
-
-.titulo-recolhivel::after {
-    content: '▼';
-    position: absolute;
-    right: 10px;
-    font-size: 0.6em;
-    transition: transform 0.3s ease;
-}
-
-.titulo-recolhivel.ativo::after {
-    transform: rotate(180deg);
-}
-
-
 
 .secao-pesquisa {
     max-width: 800px;
@@ -132,38 +110,7 @@ header p {
     background-color: #b3916c; /* Dourado mais escuro */
 }
 
-/* Catálogo de Produtos */
-.catalogo-produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding-bottom: 20px;
-    transition: max-height 0.7s ease-in-out;
-    max-height: none;          /* deixa expandido por padrão */
-    overflow: visible;         /* permite que o grid cresça sem cortar os itens */
-}
 
-.catalogo-produtos.recolhido {
-    max-height: 0;             /* encolhe apenas no estado recolhido */
-    overflow: hidden;          /* esconde os itens quando recolhido */
-    padding: 0;
-    margin: 0;
-    gap: 0;
-    border-width: 0;
-}
-
-@media (max-width: 768px) {
-    .catalogo-produtos {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .catalogo-produtos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-}
 .produto {
     background-color: white;
     border-radius: 8px;
@@ -726,4 +673,53 @@ footer.is-visible {
     .header-content {
         padding: 20px 3%; /* Ajusta o padding para telas menores */
     }
+}
+
+/* --- ESTILO DAS SEÇÕES RECOLHÍVEIS (Régia Beauty) --- */
+
+.titulo-recolhivel {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    user-select: none;
+}
+
+/* A setinha no final do título */
+.titulo-recolhivel::after {
+    content: '▼';
+    font-size: 0.6em;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    color: #c5a47e; /* Dourado */
+}
+
+/* Gira a seta quando a seção está aberta */
+.titulo-recolhivel.ativo::after {
+    transform: rotate(180deg);
+}
+
+/* --- ESTILO ÚNICO PARA O CATÁLOGO --- */
+.catalogo-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    
+    /* Para a animação funcionar, o max-height precisa de um valor numérico alto */
+    max-height: 15000px; 
+    opacity: 1;
+    transition: max-height 0.8s ease-in-out, opacity 0.4s ease;
+}
+
+/* Quando está fechado */
+.catalogo-produtos.recolhido {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+    pointer-events: none;
 }
