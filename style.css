@@ -44,7 +44,7 @@ header p {
     max-width: 1200px;
     margin: 40px auto 0 auto;
     padding: 0 20px;
-    overflow: hidden;
+    /* overflow: hidden; */ /* Removido para permitir que o conteúdo se expanda */
 }
 
 .secao-marca h2 {
@@ -729,7 +729,7 @@ footer.is-visible {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding-bottom: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */ /* Removido daqui para permitir que o conteúdo se expanda quando a seção está aberta */
     
     /* Para a animação funcionar, o max-height precisa de um valor numérico alto */
     max-height: 15000px; 
@@ -744,6 +744,7 @@ footer.is-visible {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     margin: 0 !important;
+    overflow: hidden !important; /* Garante que o conteúdo seja escondido e não ocupe espaço */
     pointer-events: none;
 }
 
