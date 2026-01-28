@@ -5,7 +5,7 @@ const produtosRacco = [
         marca: "Racco",
         nome: "Mousse Spray Depilatório Depeeling Racco, 150ml",
         descricao: "Remove os pelos de forma rápida, prática e sem dor, garantindo uma pele lisa e macia em poucos minutos.",
-        preco: 84.9,
+        preco: 99.9,
         imagem: "https://acdn-us.mitiendanube.com/stores/002/001/491/products/1610_mousse-spray-depilatorio-depeeling-ceef7e1570b98299ee17387541819472-480-0.webp"
       },
       {
