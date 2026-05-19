@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 htmlFinal += `
                     <div class="produto">
-                        <img src="${p.imagem}" loading="lazy" alt="${p.nome}" onerror="this.src='imagens/logo4.png'">
+                        <img src="${p.imagem || 'imagens/logo4.png'}" loading="lazy" alt="${p.nome}" onerror="this.src='imagens/logo4.png'">
                         <h3>${p.nome}</h3>
                         <p class="descricao">${p.descricao || ''}</p>
                         <p class="preco">${precoTxt}</p>
@@ -108,11 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const itemHtml = `
                     <div class="sacola-item">
-                        <img src="${produtoDetalhes.imagem}" alt="${produtoDetalhes.nome}" onerror="this.src='imagens/logo4.png'">
+                        <img src="${produtoDetalhes.imagem || 'imagens/logo4.png'}" alt="${produtoDetalhes.nome}" onerror="this.src='imagens/logo4.png'">
                         <div class="sacola-item-info">
                             <h4>${produtoDetalhes.nome}</h4>
-                            <p>R$ ${precoUnitario.toFixed(2).replace('.', ',')} x ${itemSacola.quantidade}</p>
-                            <p>Total: R$ ${precoTotalItem.toFixed(2).replace('.', ',')}</p>
+                            <p>Qtd: ${itemSacola.quantidade}</p>
                         </div>
                         <div class="sacola-item-controles">
                             <button onclick="alterarQuantidade(${itemSacola.id}, -1)">-</button>
@@ -143,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        totalSacolaFooterSpan.innerText = `R$ ${totalValor.toFixed(2).replace('.', ',')}`;
-        totalSacolaModalSpan.innerText = `R$ ${totalValor.toFixed(2).replace('.', ',')}`;
+        totalSacolaFooterSpan.innerText = '';
+        totalSacolaModalSpan.innerText = '';
 
         renderizarItensSacola(); // Renderiza os itens no modal
     }
@@ -162,12 +161,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const produtoDetalhes = produtos.find(p => p.id === itemSacola.id);
             if (produtoDetalhes) {
                 const precoUnitario = (produtoDetalhes.preco && typeof produtoDetalhes.preco === 'number') ? produtoDetalhes.preco : 0;
-                mensagem += `- ${itemSacola.quantidade}x ${produtoDetalhes.nome} (${produtoDetalhes.marca}) - R$ ${(precoUnitario * itemSacola.quantidade).toFixed(2).replace('.', ',')}\n`;
-                totalPedido += precoUnitario * itemSacola.quantidade;
+                mensagem += `- ${itemSacola.quantidade}x ${produtoDetalhes.nome} (${produtoDetalhes.marca})\n`;
             }
         });
 
-        mensagem += `\nTotal do pedido: R$ ${totalPedido.toFixed(2).replace('.', ',')}`;
+        mensagem += `\nAguardo confirmação dos valores.`;
         const urlWhatsApp = `https://api.whatsapp.com/send?phone=${seuNumeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
         window.open(urlWhatsApp, '_blank');
     }

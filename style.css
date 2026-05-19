@@ -169,6 +169,7 @@ header p {
     font-size: 1.1em;
     font-weight: bold;
     color: #6d2e46;
+    display: none; /* Preços temporariamente ocultos */
 }
 
 .produto button {
