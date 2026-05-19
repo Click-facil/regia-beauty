@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // 
-    
+    -
     function carregarTodaVitrine() {
         Object.keys(catalogos).forEach(marca => {
             const div = catalogos[marca];
