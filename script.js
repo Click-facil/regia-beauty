@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'Odorata': document.getElementById('catalogo-odorata')
     };
 
-    // 2. RENDERIZAÇÃO OTIMIZADA (Injeção Única)
+    // 
+    
     function carregarTodaVitrine() {
         Object.keys(catalogos).forEach(marca => {
             const div = catalogos[marca];
